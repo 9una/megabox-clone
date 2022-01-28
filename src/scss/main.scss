@@ -1,0 +1,430 @@
+#container {
+  section {
+    .wrapper {
+      padding: 50px 0 100px;
+      .title {
+        @include flex-align-center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        h3 {
+          font-size: 2.3em;
+          font-weight: normal;
+          color: #351f66;
+        }
+        a {
+          font-size: 1.3em;
+          i {
+            margin-left: 5px;
+          }
+        }
+      }
+      .cont {
+      }
+    }
+  }
+}
+.home {
+  main {
+    height: 900px;
+    background: url(../../img/spiderman-screenx.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: calc(90px + 80px);
+    padding-bottom: 80px;
+    color: white;
+    position: relative;
+    a,
+    button {
+      color: white;
+    }
+    .blur {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .wrapper {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      .title {
+        position: relative;
+        padding-bottom: 20px;
+        h4 {
+          display: block;
+          width: fit-content;
+          margin: auto;
+          font-weight: normal;
+          font-size: 1.2em;
+          padding-bottom: 8px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        a {
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 1.2em;
+          color: #999;
+          i {
+            margin-left: 5px;
+          }
+        }
+      }
+      .movie-cont {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        margin-bottom: 50px;
+        article {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          gap: 10px 5px;
+          h4 {
+            display: none;
+          }
+          .post {
+            grid-column: span 2;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            .img {
+              position: relative;
+              height: 350px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+              .rank {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-size: 2.6em;
+                text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+                font-style: italic;
+              }
+            }
+            .text {
+              opacity: 0;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding: 25px;
+              background: rgba(0, 0, 0, 0.85);
+              transition: opacity 0.2s;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              p {
+                font-size: 1.15em;
+                line-height: 1.5;
+              }
+              span {
+                @include flex-center;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 20px 0 5px;
+                strong {
+                  font-size: 2em;
+                  color: aquamarine;
+                  margin-left: 10px;
+                  font-weight: normal;
+                }
+              }
+            }
+            &:hover {
+              .text {
+                opacity: 1;
+              }
+            }
+          }
+          .wish,
+          .book-btn {
+            color: white;
+            padding: 8px;
+            text-align: center;
+            border-radius: 4px;
+            @include flex-center;
+          }
+          .wish {
+            border: 1px solid #777;
+            background: rgba(0, 0, 0, 0.3);
+            i {
+              margin-right: 5px;
+            }
+          }
+          .book-btn {
+            padding: 10px;
+            background: $bookgreen;
+          }
+        }
+      }
+      .find-cont {
+        width: 100%;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.3);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        div {
+          @include flex-center;
+          position: relative;
+          width: 100%;
+          &:not(:last-child) {
+            &::after {
+              content: "";
+              width: 1px;
+              height: 15px;
+              background: rgba(255, 255, 255, 0.3);
+              position: absolute;
+              right: 0;
+            }
+          }
+          form {
+            position: relative;
+            input {
+              border: none;
+              border-bottom: 1px solid #888;
+              padding-right: 25px;
+              padding-bottom: 5px;
+              background: none;
+              color: white;
+            }
+            button {
+              position: absolute;
+              right: 5px;
+            }
+          }
+          a {
+            @include flex-align-center;
+            font-size: 1.1em;
+            i {
+              font-size: 1.8em;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      .scroll-animation {
+        color: white;
+        display: block;
+        width: 16px;
+        margin: 40px auto 0;
+        animation: scroll 2s ease-in-out infinite;
+      }
+      @keyframes scroll {
+        0% {
+          margin-top: 40px;
+        }
+        40% {
+          margin-top: 60px;
+        }
+        100% {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+.benefit {
+  background: linear-gradient(
+    to top,
+    #503396 0%,
+    #503396 40%,
+    #ffffff 40%,
+    #ffffff 100%
+  );
+  .wrapper {
+    .title {
+      margin-bottom: 10px !important;
+    }
+    .banner {
+      display: grid;
+      grid-template-columns: 441px 204px auto;
+      gap: 0 20px;
+      .slide-bn {
+        grid-column: span 2;
+        position: relative;
+        .slide {
+          height: 325px;
+          overflow: hidden;
+          ul {
+            position: relative;
+            li {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              z-index: 1;
+              a {
+                width: 100%;
+                height: 325px;
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+                img {
+                  object-fit: contain;
+                  position: absolute;
+                  transition: all 0.3s;
+                  &:first-child {
+                    left: 0;
+                    top: 0;
+                  }
+                  &:last-child {
+                    right: 0;
+                  }
+                }
+              }
+              &.active {
+                z-index: 2;
+              }
+            }
+          }
+        }
+        .pagination {
+          position: absolute;
+        }
+      }
+      .ad-bn {
+        grid-row: span 2;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .small-bn {
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        &.long {
+        }
+        &.short {
+        }
+      }
+    }
+    .tab {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      a {
+        padding: 50px 0 0;
+        width: 100%;
+        @include flex-center;
+        flex-direction: column;
+        color: white;
+        font-size: 1.2em;
+        img {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+.curation {
+  background: #252451;
+  .wrapper {
+    .title {
+      h3 {
+        color: white !important;
+      }
+      a {
+        color: #dbdbdb;
+      }
+    }
+    .curate {
+      display: grid;
+      grid-template-columns: 320px auto;
+      gap: 30px;
+      .movie {
+        padding: 15px;
+        position: relative;
+        .movie-post {
+          grid-column: span 2;
+          width: 100%;
+          margin-bottom: 5px;
+          img {
+            width: 100%;
+            border-radius: 15px;
+          }
+        }
+        .sticker {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        a:not(:first-child) {
+          width: 48%;
+          border-radius: 5px;
+          padding: 15px;
+          text-align: center;
+          font-size: 1.4em;
+          color: white;
+          &:nth-child(3) {
+            float: left;
+            border: 1px solid white;
+          }
+          &.book-btn {
+            float: right;
+            background: $bookgreen;
+          }
+        }
+      }
+      .text {
+        color: white;
+        line-height: 1.5;
+        strong {
+          font-size: 1.5em;
+          font-weight: normal;
+        }
+        h2 {
+          font-size: 2.8em;
+          font-weight: normal;
+        }
+        p {
+          font-size: 1.15em;
+          margin-top: 25px;
+          padding-top: 20px;
+          border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .another-list {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 15px;
+          margin-top: 20px;
+          a {
+            position: relative;
+            padding-top: 7px;
+            text-align: center;
+            color: white;
+            font-size: 1.15em;
+            img {
+              &:first-child {
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 5px;
+              }
+              &.sticker {
+                position: absolute;
+                top: 0;
+                left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.info {
+}

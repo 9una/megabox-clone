@@ -1,0 +1,101 @@
+header {
+  width: 100%;
+  height: 90px;
+  padding: 18px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 9;
+  .wrapper {
+    position: relative;
+    .logo {
+      position: absolute;
+      left: 50%;
+      top: 5px;
+      transform: translateX(-50%);
+    }
+    .header-top {
+      @include flex-align-center;
+      justify-content: space-between;
+      & > div {
+        @include flex-align-center;
+        gap: 20px;
+        a,
+        button {
+          color: #999;
+        }
+      }
+      .top-left {
+      }
+      .top-right {
+        .login-btn {
+          line-height: 1;
+        }
+      }
+    }
+    .gnb {
+      padding-top: 18px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      & > button,
+      & > a {
+        color: white;
+        width: 50px;
+        font-size: 1.5em;
+        &.align-left {
+          text-align: left;
+          margin-right: 10px;
+        }
+        &.align-right {
+          text-align: right;
+          margin-left: 10px;
+        }
+      }
+      .all-menu-btn {
+        font-size: 1.9em;
+      }
+      .search-btn {
+      }
+      & > ul {
+        display: grid;
+        grid-template-columns: auto auto 1fr 1fr auto auto;
+        width: 100%;
+        padding: 0 60px;
+        & > li {
+          & > a {
+            color: white;
+            font-size: 1.4em;
+          }
+          .lnb {
+            display: none;
+            li {
+              a {
+              }
+            }
+          }
+          &:nth-child(1) a,
+          &:nth-child(2) a {
+            padding-right: 50px;
+          }
+          &:nth-child(3) {
+            text-align: left;
+          }
+          &:nth-child(4) {
+            text-align: right;
+          }
+          &:nth-child(5) a,
+          &:nth-child(6) a {
+            padding-left: 50px;
+          }
+        }
+      }
+      .go-booking {
+      }
+      .mypage-btn {
+      }
+    }
+  }
+}

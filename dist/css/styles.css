@@ -1,4 +1,499 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&family=Roboto:wght@300;700&display=swap");
+header {
+  width: 100%;
+  height: 90px;
+  padding: 18px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 9;
+}
+header .wrapper {
+  position: relative;
+}
+header .wrapper .logo {
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  transform: translateX(-50%);
+}
+header .wrapper .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .wrapper .header-top > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .wrapper .header-top > div a,
+header .wrapper .header-top > div button {
+  color: #999;
+}
+header .wrapper .header-top .top-right .login-btn {
+  line-height: 1;
+}
+header .wrapper .gnb {
+  padding-top: 18px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+header .wrapper .gnb > button, header .wrapper .gnb > a {
+  color: white;
+  width: 50px;
+  font-size: 1.5em;
+}
+header .wrapper .gnb > button.align-left, header .wrapper .gnb > a.align-left {
+  text-align: left;
+  margin-right: 10px;
+}
+header .wrapper .gnb > button.align-right, header .wrapper .gnb > a.align-right {
+  text-align: right;
+  margin-left: 10px;
+}
+header .wrapper .gnb .all-menu-btn {
+  font-size: 1.9em;
+}
+header .wrapper .gnb > ul {
+  display: grid;
+  grid-template-columns: auto auto 1fr 1fr auto auto;
+  width: 100%;
+  padding: 0 60px;
+}
+header .wrapper .gnb > ul > li > a {
+  color: white;
+  font-size: 1.4em;
+}
+header .wrapper .gnb > ul > li .lnb {
+  display: none;
+}
+header .wrapper .gnb > ul > li:nth-child(1) a, header .wrapper .gnb > ul > li:nth-child(2) a {
+  padding-right: 50px;
+}
+header .wrapper .gnb > ul > li:nth-child(3) {
+  text-align: left;
+}
+header .wrapper .gnb > ul > li:nth-child(4) {
+  text-align: right;
+}
+header .wrapper .gnb > ul > li:nth-child(5) a, header .wrapper .gnb > ul > li:nth-child(6) a {
+  padding-left: 50px;
+}
+#container section .wrapper {
+  padding: 50px 0 100px;
+}
+#container section .wrapper .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+#container section .wrapper .title h3 {
+  font-size: 2.3em;
+  font-weight: normal;
+  color: #351f66;
+}
+#container section .wrapper .title a {
+  font-size: 1.3em;
+}
+#container section .wrapper .title a i {
+  margin-left: 5px;
+}
+.home main {
+  height: 900px;
+  background: url(../../img/spiderman-screenx.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 170px;
+  padding-bottom: 80px;
+  color: white;
+  position: relative;
+}
+.home main a,
+.home main button {
+  color: white;
+}
+.home main .blur {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.home main .wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.home main .wrapper .title {
+  position: relative;
+  padding-bottom: 20px;
+}
+.home main .wrapper .title h4 {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  font-weight: normal;
+  font-size: 1.2em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.home main .wrapper .title a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.2em;
+  color: #999;
+}
+.home main .wrapper .title a i {
+  margin-left: 5px;
+}
+.home main .wrapper .movie-cont {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.home main .wrapper .movie-cont article {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px 5px;
+}
+.home main .wrapper .movie-cont article h4 {
+  display: none;
+}
+.home main .wrapper .movie-cont article .post {
+  grid-column: span 2;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.home main .wrapper .movie-cont article .post .img {
+  position: relative;
+  height: 350px;
+}
+.home main .wrapper .movie-cont article .post .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home main .wrapper .movie-cont article .post .img .rank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 2.6em;
+  text-shadow: 2px 2px 3px black;
+  font-style: italic;
+}
+.home main .wrapper .movie-cont article .post .text {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.85);
+  transition: opacity 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home main .wrapper .movie-cont article .post .text p {
+  font-size: 1.15em;
+  line-height: 1.5;
+}
+.home main .wrapper .movie-cont article .post .text span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0 5px;
+}
+.home main .wrapper .movie-cont article .post .text span strong {
+  font-size: 2em;
+  color: aquamarine;
+  margin-left: 10px;
+  font-weight: normal;
+}
+.home main .wrapper .movie-cont article .post:hover .text {
+  opacity: 1;
+}
+.home main .wrapper .movie-cont article .wish,
+.home main .wrapper .movie-cont article .book-btn {
+  color: white;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home main .wrapper .movie-cont article .wish {
+  border: 1px solid #777;
+  background: rgba(0, 0, 0, 0.3);
+}
+.home main .wrapper .movie-cont article .wish i {
+  margin-right: 5px;
+}
+.home main .wrapper .movie-cont article .book-btn {
+  padding: 10px;
+  background: #037b94;
+}
+.home main .wrapper .find-cont {
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+.home main .wrapper .find-cont div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.home main .wrapper .find-cont div:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 0;
+}
+.home main .wrapper .find-cont div form {
+  position: relative;
+}
+.home main .wrapper .find-cont div form input {
+  border: none;
+  border-bottom: 1px solid #888;
+  padding-right: 25px;
+  padding-bottom: 5px;
+  background: none;
+  color: white;
+}
+.home main .wrapper .find-cont div form button {
+  position: absolute;
+  right: 5px;
+}
+.home main .wrapper .find-cont div a {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+.home main .wrapper .find-cont div a i {
+  font-size: 1.8em;
+  margin-right: 10px;
+}
+.home main .wrapper .scroll-animation {
+  color: white;
+  display: block;
+  width: 16px;
+  margin: 40px auto 0;
+  animation: scroll 2s ease-in-out infinite;
+}
+@keyframes scroll {
+  0% {
+    margin-top: 40px;
+  }
+  40% {
+    margin-top: 60px;
+  }
+  100% {
+    margin-top: 40px;
+  }
+}
+
+.benefit {
+  background: linear-gradient(to top, #503396 0%, #503396 40%, #ffffff 40%, #ffffff 100%);
+}
+.benefit .wrapper .title {
+  margin-bottom: 10px !important;
+}
+.benefit .wrapper .banner {
+  display: grid;
+  grid-template-columns: 441px 204px auto;
+  gap: 0 20px;
+}
+.benefit .wrapper .banner .slide-bn {
+  grid-column: span 2;
+  position: relative;
+}
+.benefit .wrapper .banner .slide-bn .slide {
+  height: 325px;
+  overflow: hidden;
+}
+.benefit .wrapper .banner .slide-bn .slide ul {
+  position: relative;
+}
+.benefit .wrapper .banner .slide-bn .slide ul li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.benefit .wrapper .banner .slide-bn .slide ul li a {
+  width: 100%;
+  height: 325px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.benefit .wrapper .banner .slide-bn .slide ul li a img {
+  object-fit: contain;
+  position: absolute;
+  transition: all 0.3s;
+}
+.benefit .wrapper .banner .slide-bn .slide ul li a img:first-child {
+  left: 0;
+  top: 0;
+}
+.benefit .wrapper .banner .slide-bn .slide ul li a img:last-child {
+  right: 0;
+}
+.benefit .wrapper .banner .slide-bn .slide ul li.active {
+  z-index: 2;
+}
+.benefit .wrapper .banner .slide-bn .pagination {
+  position: absolute;
+}
+.benefit .wrapper .banner .ad-bn {
+  grid-row: span 2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.benefit .wrapper .banner .ad-bn img {
+  width: 100%;
+  height: 100%;
+}
+.benefit .wrapper .banner .small-bn {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+}
+.benefit .wrapper .banner .small-bn img {
+  width: 100%;
+  height: 100%;
+}
+.benefit .wrapper .tab {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.benefit .wrapper .tab a {
+  padding: 50px 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 1.2em;
+}
+.benefit .wrapper .tab a img {
+  margin-bottom: 10px;
+}
+
+.curation {
+  background: #252451;
+}
+.curation .wrapper .title h3 {
+  color: white !important;
+}
+.curation .wrapper .title a {
+  color: #dbdbdb;
+}
+.curation .wrapper .curate {
+  display: grid;
+  grid-template-columns: 320px auto;
+  gap: 30px;
+}
+.curation .wrapper .curate .movie {
+  padding: 15px;
+  position: relative;
+}
+.curation .wrapper .curate .movie .movie-post {
+  grid-column: span 2;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.curation .wrapper .curate .movie .movie-post img {
+  width: 100%;
+  border-radius: 15px;
+}
+.curation .wrapper .curate .movie .sticker {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.curation .wrapper .curate .movie a:not(:first-child) {
+  width: 48%;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.4em;
+  color: white;
+}
+.curation .wrapper .curate .movie a:not(:first-child):nth-child(3) {
+  float: left;
+  border: 1px solid white;
+}
+.curation .wrapper .curate .movie a:not(:first-child).book-btn {
+  float: right;
+  background: #037b94;
+}
+.curation .wrapper .curate .text {
+  color: white;
+  line-height: 1.5;
+}
+.curation .wrapper .curate .text strong {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+.curation .wrapper .curate .text h2 {
+  font-size: 2.8em;
+  font-weight: normal;
+}
+.curation .wrapper .curate .text p {
+  font-size: 1.15em;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.curation .wrapper .curate .text .another-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+.curation .wrapper .curate .text .another-list a {
+  position: relative;
+  padding-top: 7px;
+  text-align: center;
+  color: white;
+  font-size: 1.15em;
+}
+.curation .wrapper .curate .text .another-list a img:first-child {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.curation .wrapper .curate .text .another-list a img.sticker {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,3 +518,5 @@ img {
   width: 1100px;
   margin: auto;
 }
+
+/*# sourceMappingURL=styles.css.map */
