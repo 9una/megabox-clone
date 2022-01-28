@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/styles.css" />
-    <title>메가박스 클론코딩</title>
+    <title>MEET PLAY SHARE, 메가박스 클론코딩</title>
 </head>
 <body>
     <header id="header" class="main-header"></header>
@@ -233,43 +233,36 @@
         </section>
     </div>
     <!-- container - e -->
-    <footer>
-        <div class="wrapper">
-            <div class="fnb">
-                <ul>
-                    <li><a href="#;">회사소개</a></li>
-                    <li><a href="#;">인재채용</a></li>
-                    <li><a href="#;">사회공헌</a></li>
-                    <li><a href="#;">제휴/광고/부대사업문의</a></li>
-                    <li><a href="#;">이용약관</a></li>
-                    <li><a href="#;">위치기반서비스 이용약관</a></li>
-                    <li><a href="#;"><b>개인정보처리방침</b></a></li>
-                    <li><a href="#;">윤리경영</a></li>
-                </ul>
-                <button type="button" class="find-theather"><i class="fas fa-search"></i> 극장찾기</button>
-            </div>
-            <div class="footer-bottom">
-                <a href="index.html" class="logo"></a>
-                <p>
-                    서울특별시 마포구 월드컵로 240, 지상 2층 (성산동, 월드컵주경기장) ARS 1544-0070<br />
-                    대표자명 홍정인 · 개인정보보호책임자 조샹연 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 제 2020-서울마포-4545 호<br />
-                    COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved
-                </p>
-                <div class="sns">
-                    <a href="#;"><i class="fab fa-twitter"></i></a>
-                    <a href="#;"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#;"><i class="fab fa-instagram"></i></a>
-                    <a href="#;"><i class="fab fa-google-play"></i></a>
-                    <a href="#;"><i class="fab fa-apple"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer id="footer"></footer>
     <!-- footer - e -->
-    
+    <div id="popup" style="display:none;">
+        <div class="slide">
+            <a href="#">1</a>
+            <a href="#">2</a>
+        </div>
+        <div class="pagination">
+            <button type="button" class="play-btn"><i class="fas fa-pause"></i></button>
+            <button type="button" class="dot active">●</button>
+            <button type="button" class="dot">●</button>
+        </div>
+        <div class="today-not-check">
+            <form>
+                <input type="checkbox" id="close">
+                <label for="close">하루동안 보지 않기</label>
+            </form>
+        </div>
+    </div>
+    <!-- popup - e -->
+
+    <script src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous" ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     
-    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#header').load("header.html");
+            $('#footer').load("footer.html");
+        });
+    </script>
 </body>
 </html>
