@@ -427,4 +427,101 @@
   }
 }
 .info {
+  & > div:not(.notice) {
+    padding-bottom: 50px !important;
+    &:first-child {
+      .cont {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+        a {
+          width: 100%;
+          padding-bottom: 100%;
+          position: relative;
+          border-radius: 10px;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+          .new {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: #329eb1;
+            color: white;
+            font-size: 0.9em;
+          }
+          &:nth-child(1) {
+            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-dolby.png)
+              no-repeat top center;
+            background-size: cover;
+          }
+          &:nth-child(2) {
+            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-private.png)
+              no-repeat top center;
+            background-size: cover;
+          }
+          &:nth-child(3) {
+            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-boutique.png)
+              no-repeat top center;
+            background-size: cover;
+          }
+          &:nth-child(4) {
+            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-mx.png)
+              no-repeat top center;
+            background-size: cover;
+          }
+          &:nth-child(5) {
+            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-comfort.png)
+              no-repeat top center;
+            background-size: cover;
+          }
+          &:nth-child(6) {
+            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-kids.png)
+              no-repeat top center;
+            background-size: cover;
+          }
+          &:hover {
+            background-position: bottom center;
+          }
+        }
+      }
+    }
+    &:last-child {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+      a {
+        padding: 5px 0 10px;
+        @include flex-center;
+        flex-direction: column;
+        font-size: 1.1em;
+        i {
+          font-size: 3.5em;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  .notice {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    .wrapper {
+      padding: 30px 0 !important;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 20px;
+      & > span,
+      & > a {
+        @include flex-align-center;
+      }
+      p {
+        b {
+        }
+        span {
+          float: right;
+        }
+      }
+    }
+  }
 }

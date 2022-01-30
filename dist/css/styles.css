@@ -494,6 +494,150 @@ header .wrapper .gnb > ul > li:nth-child(5) a, header .wrapper .gnb > ul > li:nt
   left: 10px;
 }
 
+.info > div:not(.notice) {
+  padding-bottom: 50px !important;
+}
+.info > div:not(.notice):first-child .cont {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.info > div:not(.notice):first-child .cont a {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.info > div:not(.notice):first-child .cont a .new {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #329eb1;
+  color: white;
+  font-size: 0.9em;
+}
+.info > div:not(.notice):first-child .cont a:nth-child(1) {
+  background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-dolby.png) no-repeat top center;
+  background-size: cover;
+}
+.info > div:not(.notice):first-child .cont a:nth-child(2) {
+  background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-private.png) no-repeat top center;
+  background-size: cover;
+}
+.info > div:not(.notice):first-child .cont a:nth-child(3) {
+  background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-boutique.png) no-repeat top center;
+  background-size: cover;
+}
+.info > div:not(.notice):first-child .cont a:nth-child(4) {
+  background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-mx.png) no-repeat top center;
+  background-size: cover;
+}
+.info > div:not(.notice):first-child .cont a:nth-child(5) {
+  background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-comfort.png) no-repeat top center;
+  background-size: cover;
+}
+.info > div:not(.notice):first-child .cont a:nth-child(6) {
+  background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-kids.png) no-repeat top center;
+  background-size: cover;
+}
+.info > div:not(.notice):first-child .cont a:hover {
+  background-position: bottom center;
+}
+.info > div:not(.notice):last-child {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.info > div:not(.notice):last-child a {
+  padding: 5px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.1em;
+}
+.info > div:not(.notice):last-child a i {
+  font-size: 3.5em;
+  margin-bottom: 15px;
+}
+.info .notice {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.info .notice .wrapper {
+  padding: 30px 0 !important;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+.info .notice .wrapper > span, .info .notice .wrapper > a {
+  display: flex;
+  align-items: center;
+}
+.info .notice .wrapper p span {
+  float: right;
+}
+
+footer {
+  background: #f8f8fa;
+}
+footer .wrapper {
+  padding: 40px 0 60px;
+}
+footer .wrapper .fnb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+footer .wrapper .fnb ul {
+  display: flex;
+}
+footer .wrapper .fnb ul li {
+  margin-right: 15px;
+}
+footer .wrapper .fnb .find-theather {
+  border: 1px solid black;
+  padding: 6px 15px;
+  border-radius: 30px;
+}
+footer .wrapper .fnb .find-theather i {
+  margin-right: 8px;
+}
+footer .wrapper .footer-bottom {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+footer .wrapper .footer-bottom img {
+  object-fit: contain;
+}
+footer .wrapper .footer-bottom p {
+  margin-right: auto;
+  line-height: 1.4;
+}
+footer .wrapper .footer-bottom .sns {
+  display: flex;
+  gap: 10px;
+}
+footer .wrapper .footer-bottom .sns a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #999;
+}
+footer .wrapper .footer-bottom .sns a i {
+  color: white;
+  font-size: 1.4em;
+}
+
 * {
   margin: 0;
   padding: 0;

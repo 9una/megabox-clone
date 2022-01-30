@@ -1,0 +1,52 @@
+footer {
+  background: #f8f8fa;
+  .wrapper {
+    padding: 40px 0 60px;
+    .fnb {
+      @include flex-align-center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      ul {
+        display: flex;
+        li {
+          margin-right: 15px;
+        }
+      }
+      .find-theather {
+        border: 1px solid black;
+        padding: 6px 15px;
+        border-radius: 30px;
+        i {
+          margin-right: 8px;
+        }
+      }
+    }
+    .footer-bottom {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      img {
+        object-fit: contain;
+      }
+      p {
+        margin-right: auto;
+        line-height: 1.4;
+      }
+      .sns {
+        display: flex;
+        gap: 10px;
+        a {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          @include flex-center;
+          background: #999;
+          i {
+            color: white;
+            font-size: 1.4em;
+          }
+        }
+      }
+    }
+  }
+}
