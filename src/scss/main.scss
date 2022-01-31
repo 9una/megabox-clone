@@ -204,9 +204,9 @@
           a {
             @include flex-align-center;
             font-size: 1.1em;
-            i {
+            img {
               font-size: 1.8em;
-              margin-right: 10px;
+              margin-right: 15px;
             }
           }
         }
@@ -248,7 +248,7 @@
       display: grid;
       grid-template-columns: 441px 204px auto;
       gap: 0 20px;
-      .slide-bn {
+      #slide-bn {
         grid-column: span 2;
         position: relative;
         .slide {
@@ -256,11 +256,15 @@
           overflow: hidden;
           ul {
             position: relative;
+            height: 100%;
             li {
               width: 100%;
               height: 100%;
               position: absolute;
+              opacity: 0;
               z-index: 1;
+              background: white;
+              transition: opacity 0.3s;
               a {
                 width: 100%;
                 height: 325px;
@@ -270,24 +274,56 @@
                 img {
                   object-fit: contain;
                   position: absolute;
-                  transition: all 0.3s;
+                  transition: right 0.5s, top 0.5s;
                   &:first-child {
                     left: 0;
-                    top: 0;
+                    top: 100%;
                   }
                   &:last-child {
-                    right: 0;
+                    right: -100%;
                   }
                 }
               }
               &.active {
                 z-index: 2;
+                opacity: 1;
+                a {
+                  img {
+                    &:first-child {
+                      top: 0;
+                    }
+                    &:last-child {
+                      right: 0;
+                    }
+                  }
+                }
               }
             }
           }
         }
         .pagination {
           position: absolute;
+          bottom: 40px;
+          @include flex-align-center;
+          gap: 15px;
+          z-index: 3;
+          .bar {
+            width: 160px;
+            height: 2px;
+            background: #e9e9e9;
+            position: relative;
+            .dot {
+              position: absolute;
+              display: inline-block;
+              height: 100%;
+              width: 25%;
+              background: #503396;
+              transition: transform 0.3s;
+            }
+          }
+          button {
+            color: #503396;
+          }
         }
       }
       .ad-bn {
@@ -439,44 +475,39 @@
           position: relative;
           border-radius: 10px;
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+          font-size: 0;
           .new {
             position: absolute;
             right: 10px;
             top: 10px;
             padding: 5px 10px;
             border-radius: 5px;
-            background: #329eb1;
+            background: $fontgreen;
             color: white;
-            font-size: 0.9em;
+            font-size: 13px;
           }
           &:nth-child(1) {
-            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-dolby.png)
-              no-repeat top center;
+            background: url(../../img/tab-dolby.png) no-repeat top center;
             background-size: cover;
           }
           &:nth-child(2) {
-            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-private.png)
-              no-repeat top center;
+            background: url(../../img/tab-private.png) no-repeat top center;
             background-size: cover;
           }
           &:nth-child(3) {
-            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-boutique.png)
-              no-repeat top center;
+            background: url(../../img/tab-boutique.png) no-repeat top center;
             background-size: cover;
           }
           &:nth-child(4) {
-            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-mx.png)
-              no-repeat top center;
+            background: url(../../img/tab-mx.png) no-repeat top center;
             background-size: cover;
           }
           &:nth-child(5) {
-            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-comfort.png)
-              no-repeat top center;
+            background: url(../../img/tab-comfort.png) no-repeat top center;
             background-size: cover;
           }
           &:nth-child(6) {
-            background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-megainfo-kids.png)
-              no-repeat top center;
+            background: url(../../img/tab-kids.png) no-repeat top center;
             background-size: cover;
           }
           &:hover {
@@ -494,8 +525,7 @@
         @include flex-center;
         flex-direction: column;
         font-size: 1.1em;
-        i {
-          font-size: 3.5em;
+        img {
           margin-bottom: 15px;
           color: #59bec9;
         }

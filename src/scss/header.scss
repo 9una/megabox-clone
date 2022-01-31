@@ -1,7 +1,7 @@
 header {
   width: 100%;
   height: 90px;
-  padding: 18px 0;
+  padding-top: 15px;
   position: absolute;
   top: 0;
   left: 0;
@@ -17,6 +17,7 @@ header {
       transform: translateX(-50%);
     }
     .header-top {
+      height: 15px;
       @include flex-align-center;
       justify-content: space-between;
       & > div {
@@ -36,65 +37,282 @@ header {
       }
     }
     .gnb {
-      padding-top: 15px;
       width: 100%;
+      height: 60px;
       display: flex;
       align-items: center;
       & > button,
       & > a {
-        color: white;
-        width: 50px;
-        font-size: 1.5em;
+        width: 45px;
         &.align-left {
           text-align: left;
-          margin-right: 10px;
         }
         &.align-right {
           text-align: right;
-          margin-left: 10px;
         }
       }
-      .all-menu-btn {
-        font-size: 1.9em;
-      }
-      .search-btn {
-      }
       & > ul {
-        display: grid;
-        grid-template-columns: auto auto 1fr 1fr auto auto;
-        width: 100%;
-        padding: 0 60px;
+        padding: 0 40px;
+        width: calc(100% - 180px);
+        height: 100%;
         & > li {
+          height: 100%;
+          padding: 0 25px;
+          position: relative;
+          &.left {
+            float: left;
+            &:hover {
+              .lnb {
+                transform: translateX(-40%);
+                left: 50%;
+              }
+            }
+          }
+          &.right {
+            float: right;
+            &:hover {
+              .lnb {
+                transform: translateX(40%);
+                right: 50%;
+              }
+            }
+          }
           & > a {
             color: white;
+            height: 100%;
+            @include flex-center;
             font-size: 1.4em;
           }
           .lnb {
             display: none;
-            li {
-              a {
+          }
+          &:hover {
+            position: relative;
+            &:not(:nth-child(5))::after {
+              content: "";
+              width: 100vw;
+              height: 55px;
+              position: fixed;
+              left: 0;
+              background: rgba(0, 0, 0, 0.3);
+            }
+            & > a::after {
+              content: "";
+              width: calc(100% - 50px);
+              height: 3px;
+              background: white;
+              display: inline-block;
+              position: absolute;
+              bottom: 0;
+            }
+            .lnb {
+              display: flex;
+              width: max-content;
+              position: absolute;
+              z-index: 1;
+              bottom: -53px;
+              padding: 20px 0;
+              gap: 20px;
+              li {
+                a {
+                  color: white;
+                  font-size: 1.15em;
+                }
               }
             }
           }
-          &:nth-child(1) a,
-          &:nth-child(2) a {
-            padding-right: 50px;
+        }
+      }
+    }
+  }
+  .call-box {
+    display: none;
+    width: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    .close-btn {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -52px;
+      background: url(../../img/header-icon-close.png) no-repeat center;
+    }
+    .wrapper {
+      padding: 50px 0 60px;
+    }
+    &.visible {
+      display: block;
+    }
+  }
+  .all-menu-box {
+    background: #333;
+    .close-btn {
+      left: calc(50% - 555px);
+    }
+    .wrapper {
+      padding-bottom: 20px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0 30px;
+      h4 {
+        grid-column: span 6;
+        color: white;
+        font-size: 2em;
+        font-weight: normal;
+        margin-bottom: 25px;
+        letter-spacing: 0.02em;
+      }
+      div {
+        text-align: center;
+        font-size: 1.15em;
+        padding-bottom: 50px;
+        @include flex-align-center;
+        flex-direction: column;
+        span {
+          display: block;
+          width: 100%;
+          font-size: 1.25em;
+          border-top: 1px solid #555;
+          border-bottom: 1px solid #555;
+          font-weight: bold;
+          padding: 15px 0 13px;
+          margin-bottom: 15px;
+          color: white;
+        }
+        a {
+          width: fit-content;
+          padding: 8px 0;
+          color: #bbb;
+          &:hover {
+            color: $fontgreen;
+            position: relative;
+            text-decoration: underline;
           }
-          &:nth-child(3) {
-            text-align: left;
+        }
+        &.my-megabox {
+          grid-row: span 2;
+        }
+      }
+    }
+  }
+  .search-box {
+    background: #351f67;
+    .close-btn {
+      left: calc(50% - 515px);
+    }
+    .wrapper {
+      display: flex;
+      gap: 20px;
+      & > div {
+        width: 50%;
+      }
+      .ranking {
+        .tab {
+          margin-bottom: 30px;
+          button {
+            margin-right: 25px;
+            padding-bottom: 10px;
+            color: white;
+            &.active {
+              position: relative;
+              &::after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: white;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+              }
+            }
           }
-          &:nth-child(4) {
-            text-align: right;
+        }
+        .cont {
+          @include flex-align-center;
+          gap: 50px;
+          .img {
+            width: 150px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
           }
-          &:nth-child(5) a,
-          &:nth-child(6) a {
-            padding-left: 50px;
+          ul {
+            li {
+              a {
+                color: white;
+                padding: 5px 0;
+                font-size: 1.2em;
+                @include flex-align-center;
+                span {
+                  font-size: 1.7em;
+                  margin-right: 15px;
+                  font-style: italic;
+                  margin-bottom: 3px;
+                }
+              }
+            }
           }
         }
       }
-      .go-booking {
+      .search-form {
+        @include flex-center;
+        form {
+          width: 100%;
+          input {
+            background: none;
+            border: 0;
+            border-bottom: 1px solid white;
+            width: 75%;
+            padding: 15px 40px 15px 10px;
+            color: white;
+            font-size: 1.3em;
+            &::placeholder {
+              color: white;
+            }
+          }
+          button {
+            position: relative;
+            left: -35px;
+            color: white;
+            font-size: 1.4em;
+          }
+        }
       }
-      .mypage-btn {
+    }
+  }
+  .mypage-box {
+    background: $bookgreen;
+    .close-btn {
+      left: calc(50% + 515px);
+    }
+    .wrapper {
+      text-align: center;
+      @include flex-align-center;
+      flex-direction: column;
+      p,
+      button,
+      a {
+        color: white;
+        font-size: 1.15em;
+      }
+      p {
+        padding: 20px 0;
+        line-height: 1.4;
+      }
+      .login-btn {
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 130px;
+        padding: 8px 0;
+        margin-bottom: 50px;
+      }
+      .join-link {
+        display: inline-block;
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
       }
     }
   }
