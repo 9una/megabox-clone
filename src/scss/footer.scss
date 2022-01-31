@@ -10,14 +10,18 @@ footer {
         display: flex;
         li {
           margin-right: 15px;
+          a {
+            color: #444;
+          }
         }
       }
       .find-theather {
-        border: 1px solid black;
+        border: 1px solid #888;
         padding: 6px 15px;
         border-radius: 30px;
+        color: #666;
         i {
-          margin-right: 8px;
+          margin-right: 3px;
         }
       }
     }

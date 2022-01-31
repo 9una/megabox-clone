@@ -37,7 +37,7 @@ header .wrapper .header-top .top-right .login-btn {
   line-height: 1;
 }
 header .wrapper .gnb {
-  padding-top: 18px;
+  padding-top: 15px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -394,14 +394,12 @@ header .wrapper .gnb > ul > li:nth-child(5) a, header .wrapper .gnb > ul > li:nt
   padding: 50px 0 0;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
+  gap: 15px;
   color: white;
   font-size: 1.2em;
-}
-.benefit .wrapper .tab a img {
-  margin-bottom: 10px;
 }
 
 .curation {
@@ -562,24 +560,50 @@ header .wrapper .gnb > ul > li:nth-child(5) a, header .wrapper .gnb > ul > li:nt
 .info > div:not(.notice):last-child a i {
   font-size: 3.5em;
   margin-bottom: 15px;
+  color: #59bec9;
 }
 .info .notice {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
 }
 .info .notice .wrapper {
-  padding: 30px 0 !important;
+  padding: 20px 0 !important;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 20px;
 }
-.info .notice .wrapper > span, .info .notice .wrapper > a {
+.info .notice .wrapper .type,
+.info .notice .wrapper .more {
   display: flex;
   align-items: center;
 }
-.info .notice .wrapper p span {
-  float: right;
+.info .notice .wrapper .type::after {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #dbdbdb;
+  display: inline-block;
+  margin: 0 15px;
+}
+.info .notice .wrapper .more::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #999;
+  display: inline-block;
+  margin: 0 15px;
+}
+.info .notice .wrapper .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info .notice .wrapper .text b {
+  color: #037b94;
+}
+.info .notice .wrapper .more i {
+  margin-left: 10px;
+  color: #888;
 }
 
 footer {
@@ -600,13 +624,17 @@ footer .wrapper .fnb ul {
 footer .wrapper .fnb ul li {
   margin-right: 15px;
 }
+footer .wrapper .fnb ul li a {
+  color: #444;
+}
 footer .wrapper .fnb .find-theather {
-  border: 1px solid black;
+  border: 1px solid #888;
   padding: 6px 15px;
   border-radius: 30px;
+  color: #666;
 }
 footer .wrapper .fnb .find-theather i {
-  margin-right: 8px;
+  margin-right: 3px;
 }
 footer .wrapper .footer-bottom {
   display: flex;
