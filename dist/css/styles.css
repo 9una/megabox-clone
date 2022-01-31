@@ -15,9 +15,12 @@ header .wrapper {
 }
 header .wrapper .logo {
   position: absolute;
+  width: 140px;
+  height: 47px;
   left: 50%;
   top: 5px;
   transform: translateX(-50%);
+  background: url(../../img/logo-main.png) no-repeat center;
 }
 header .wrapper .header-top {
   height: 15px;
@@ -45,12 +48,7 @@ header .wrapper .gnb {
 }
 header .wrapper .gnb > button, header .wrapper .gnb > a {
   width: 45px;
-}
-header .wrapper .gnb > button.align-left, header .wrapper .gnb > a.align-left {
-  text-align: left;
-}
-header .wrapper .gnb > button.align-right, header .wrapper .gnb > a.align-right {
-  text-align: right;
+  height: 20px;
 }
 header .wrapper .gnb > ul {
   padding: 0 40px;
@@ -120,6 +118,22 @@ header .wrapper .gnb > ul > li:hover .lnb li a {
   color: white;
   font-size: 1.15em;
 }
+header .wrapper .gnb .all-menu-btn {
+  background: url(../../img/header-icon-hamburger.png) no-repeat center left;
+  background-size: contain;
+}
+header .wrapper .gnb .search-btn {
+  background: url(../../img/header-icon-search.png) no-repeat center left;
+  background-size: contain;
+}
+header .wrapper .gnb .go-booking {
+  background: url(../../img/header-icon-calendar.png) no-repeat center right;
+  background-size: contain;
+}
+header .wrapper .gnb .mypage-btn {
+  background: url(../../img/header-icon-user.png) no-repeat center right;
+  background-size: contain;
+}
 header .call-box {
   display: none;
   width: 100%;
@@ -132,7 +146,7 @@ header .call-box .close-btn {
   width: 40px;
   height: 40px;
   position: absolute;
-  top: -52px;
+  top: -50px;
   background: url(../../img/header-icon-close.png) no-repeat center;
 }
 header .call-box .wrapper {
@@ -310,6 +324,44 @@ header .mypage-box .wrapper .join-link {
   display: inline-block;
   border-bottom: 1px solid white;
   padding-bottom: 5px;
+}
+header.booking-header {
+  background: white;
+  border-bottom: 1px solid #503396;
+}
+header.booking-header .wrapper .logo {
+  background: url(../../img/logo-booking.png) no-repeat center;
+}
+header.booking-header .wrapper .header-top button,
+header.booking-header .wrapper .header-top a {
+  color: #444;
+}
+header.booking-header .wrapper .gnb > ul > li > a {
+  color: black;
+  font-weight: bold;
+}
+header.booking-header .wrapper .gnb > ul > li:hover:not(:nth-child(5))::after {
+  background: #339eb2;
+  transform: translateY(-1px);
+}
+header.booking-header .wrapper .gnb > ul > li:hover > a::after {
+  background: #339eb2;
+}
+header.booking-header .wrapper .gnb .all-menu-btn {
+  background: url(../../img/header-icon-hamburger-grey.png) no-repeat center left;
+  background-size: contain;
+}
+header.booking-header .wrapper .gnb .search-btn {
+  background: url(../../img/header-icon-search-grey.png) no-repeat center left;
+  background-size: contain;
+}
+header.booking-header .wrapper .gnb .go-booking {
+  background: url(../../img/header-icon-calendar-grey.png) no-repeat center right;
+  background-size: contain;
+}
+header.booking-header .wrapper .gnb .mypage-btn {
+  background: url(../../img/header-icon-user-grey.png) no-repeat center right;
+  background-size: contain;
 }
 
 #container section .wrapper {
@@ -868,6 +920,184 @@ header .mypage-box .wrapper .join-link {
   color: #888;
 }
 
+.booking {
+  padding-top: 90px;
+}
+.booking .location {
+  padding: 15px 0;
+  background: #f8f8fa;
+}
+.booking .location .wrapper {
+  display: flex;
+  align-items: center;
+}
+.booking .location .wrapper a {
+  font-size: 1.15em;
+}
+.booking .location .wrapper a i {
+  color: #aaa;
+  font-size: 0.9em;
+}
+.booking .location .wrapper a:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  margin: 0 10px;
+  width: 5px;
+  height: 10px;
+  background: url(../../img/icon-before-right.png) no-repeat center;
+}
+.booking main {
+  padding: 40px 0;
+}
+.booking main .wrapper .title {
+  margin-bottom: 30px;
+}
+.booking main .wrapper .title h3 {
+  font-size: 2.1em;
+  font-weight: normal;
+}
+
+.step-1 {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 3fr;
+  border: 1px solid #dbdbdb;
+  border-top: 1px solid black;
+}
+.step-1 > div {
+  padding: 10px 20px 0;
+  justify-content: space-between;
+}
+.step-1 > div:not(:first-child) {
+  height: 530px;
+}
+.step-1 > div h4 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.step-1 > div .cont .type-btn {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.step-1 > div .cont .type-btn button {
+  width: 50%;
+  padding: 5px 0;
+  border: 1px solid #e9e9e9;
+  border-bottom-color: black;
+}
+.step-1 > div .cont .type-btn button.active {
+  border-color: black;
+  border-bottom-color: white;
+}
+.step-1 > div .cont .list {
+  height: 320px;
+}
+.step-1 > div .cont-checked {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px 0;
+}
+.step-1 > div .cont-checked button {
+  border: 1px solid #e9e9e9;
+  width: 100%;
+  height: 100%;
+}
+.step-1 .date {
+  padding: 10px 0;
+  grid-column: span 3;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+  align-items: center;
+}
+.step-1 .date > div {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.step-1 .date .calendar-btn {
+  width: 50px;
+  border-left: 1px solid #dbdbdb;
+  font-size: 1.5em;
+}
+.step-1 .movie {
+  border-right: 1px solid #dbdbdb;
+}
+.step-1 .movie .cont .list {
+  overflow: hidden;
+}
+.step-1 .movie .cont .list ul {
+  display: flex;
+  flex-direction: column;
+}
+.step-1 .movie .cont .list ul li button {
+  padding: 4px 2px 4px 4px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25px auto 20px;
+  align-items: center;
+  gap: 3px;
+}
+.step-1 .movie .cont .list ul li button span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: grey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85em;
+  font-family: roboto;
+}
+.step-1 .movie .cont .list ul li button span.child {
+  background: #3299f7;
+}
+.step-1 .movie .cont .list ul li button span.youth {
+  background: #eba010;
+}
+.step-1 .movie .cont .list ul li button span.adult {
+  background: #e91709;
+}
+.step-1 .movie .cont .list ul li button span.all {
+  background: #3fa900;
+}
+.step-1 .movie .cont .list ul li button p {
+  margin-right: auto;
+  text-align: left;
+  font-size: 0.9em;
+}
+.step-1 .movie .cont .list ul li.active {
+  background: grey;
+}
+.step-1 .movie .cont .list ul li.active button {
+  color: white;
+}
+.step-1 .movie .cont-checked {
+  gap: 15px;
+}
+.step-1 .theather {
+  border-right: 1px solid #dbdbdb;
+}
+.step-1 .theather .cont .list {
+  width: 50%;
+  border-right: 1px solid #e9e9e9;
+  position: relative;
+}
+.step-1 .theather .cont .list > ul > li .sub-list {
+  display: none;
+  width: calc(100% - 20px);
+  position: absolute;
+  top: 0;
+  left: calc(100% + 20px);
+}
+.step-1 .theather .cont .list > ul > li.active {
+  background: grey;
+}
+.step-1 .theather .cont .list > ul > li.active .sub-list {
+  display: block;
+}
 footer {
   background: #f8f8fa;
 }

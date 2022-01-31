@@ -12,9 +12,12 @@ header {
     position: relative;
     .logo {
       position: absolute;
+      width: 140px;
+      height: 47px;
       left: 50%;
       top: 5px;
       transform: translateX(-50%);
+      background: url(../../img/logo-main.png) no-repeat center;
     }
     .header-top {
       height: 15px;
@@ -44,12 +47,7 @@ header {
       & > button,
       & > a {
         width: 45px;
-        &.align-left {
-          text-align: left;
-        }
-        &.align-right {
-          text-align: right;
-        }
+        height: 20px;
       }
       & > ul {
         padding: 0 40px;
@@ -123,6 +121,24 @@ header {
           }
         }
       }
+      .all-menu-btn {
+        background: url(../../img/header-icon-hamburger.png) no-repeat center
+          left;
+        background-size: contain;
+      }
+      .search-btn {
+        background: url(../../img/header-icon-search.png) no-repeat center left;
+        background-size: contain;
+      }
+      .go-booking {
+        background: url(../../img/header-icon-calendar.png) no-repeat center
+          right;
+        background-size: contain;
+      }
+      .mypage-btn {
+        background: url(../../img/header-icon-user.png) no-repeat center right;
+        background-size: contain;
+      }
     }
   }
   .call-box {
@@ -136,7 +152,7 @@ header {
       width: 40px;
       height: 40px;
       position: absolute;
-      top: -52px;
+      top: -50px;
       background: url(../../img/header-icon-close.png) no-repeat center;
     }
     .wrapper {
@@ -186,7 +202,7 @@ header {
           padding: 8px 0;
           color: #bbb;
           &:hover {
-            color: $fontgreen;
+            color: $lightgreen;
             position: relative;
             text-decoration: underline;
           }
@@ -313,6 +329,62 @@ header {
         display: inline-block;
         border-bottom: 1px solid white;
         padding-bottom: 5px;
+      }
+    }
+  }
+
+  //빠른예매 헤더 style
+  &.booking-header {
+    background: white;
+    border-bottom: 1px solid $purple;
+    .wrapper {
+      .logo {
+        background: url(../../img/logo-booking.png) no-repeat center;
+      }
+      .header-top {
+        button,
+        a {
+          color: #444;
+        }
+      }
+      .gnb {
+        & > ul {
+          & > li {
+            & > a {
+              color: black;
+              font-weight: bold;
+            }
+            &:hover {
+              &:not(:nth-child(5))::after {
+                background: $lightgreen;
+                transform: translateY(-1px);
+              }
+              & > a::after {
+                background: $lightgreen;
+              }
+            }
+          }
+        }
+        .all-menu-btn {
+          background: url(../../img/header-icon-hamburger-grey.png) no-repeat
+            center left;
+          background-size: contain;
+        }
+        .search-btn {
+          background: url(../../img/header-icon-search-grey.png) no-repeat
+            center left;
+          background-size: contain;
+        }
+        .go-booking {
+          background: url(../../img/header-icon-calendar-grey.png) no-repeat
+            center right;
+          background-size: contain;
+        }
+        .mypage-btn {
+          background: url(../../img/header-icon-user-grey.png) no-repeat center
+            right;
+          background-size: contain;
+        }
       }
     }
   }
