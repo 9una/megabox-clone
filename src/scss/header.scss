@@ -89,7 +89,7 @@ header {
             &:not(:nth-child(5))::after {
               content: "";
               width: 100vw;
-              height: 55px;
+              height: 45px;
               position: fixed;
               left: 0;
               background: rgba(0, 0, 0, 0.3);
@@ -108,8 +108,7 @@ header {
               width: max-content;
               position: absolute;
               z-index: 1;
-              bottom: -53px;
-              padding: 20px 0;
+              padding: 15px 0;
               gap: 20px;
               li {
                 a {
