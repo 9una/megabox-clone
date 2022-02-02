@@ -45,6 +45,10 @@ function slideBanner(){
 
     prevBtn.addEventListener('click', prev);
     nextBtn.addEventListener('click', next);
-    
+
+    function play(){
+        setInterval(next, 3500);
+    }
+    play();
 }
 slideBanner();

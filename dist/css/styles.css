@@ -11,15 +11,12 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   z-index: 9;
 }
-header .wrapper {
-  position: relative;
-}
 header .wrapper .logo {
   position: absolute;
   width: 140px;
-  height: 47px;
+  height: 90px;
   left: 50%;
-  top: 5px;
+  top: 0;
   transform: translateX(-50%);
   background: url(../../img/logo-main.png) no-repeat center;
 }
@@ -89,14 +86,6 @@ header .wrapper .gnb > ul > li .lnb {
 header .wrapper .gnb > ul > li:hover {
   position: relative;
 }
-header .wrapper .gnb > ul > li:hover:not(:nth-child(5))::after {
-  content: "";
-  width: 100vw;
-  height: 45px;
-  position: fixed;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
-}
 header .wrapper .gnb > ul > li:hover > a::after {
   content: "";
   width: calc(100% - 50px);
@@ -110,13 +99,24 @@ header .wrapper .gnb > ul > li:hover .lnb {
   display: flex;
   width: max-content;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   padding: 15px 0;
   gap: 20px;
 }
 header .wrapper .gnb > ul > li:hover .lnb li a {
   color: white;
   font-size: 1.15em;
+}
+header .wrapper .gnb > ul:hover .bg {
+  position: relative;
+  top: 90px;
+  display: block;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 header .wrapper .gnb .all-menu-btn {
   background: url(../../img/header-icon-hamburger.png) no-repeat center left;
@@ -340,11 +340,10 @@ header.booking-header .wrapper .gnb > ul > li > a {
   color: black;
   font-weight: bold;
 }
-header.booking-header .wrapper .gnb > ul > li:hover:not(:nth-child(5))::after {
-  background: #339eb2;
-  transform: translateY(-1px);
-}
 header.booking-header .wrapper .gnb > ul > li:hover > a::after {
+  background: #339eb2;
+}
+header.booking-header .wrapper .gnb > ul:hover .bg {
   background: #339eb2;
 }
 header.booking-header .wrapper .gnb .all-menu-btn {
