@@ -1,0 +1,343 @@
+/*modal*/
+.modal {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.modal .cont {
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal .cont .modal-head {
+  background: #503396;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+.modal .cont .modal-head h4 {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+.modal .cont .modal-cont {
+  padding: 20px;
+}
+.modal.notice {
+  position: absolute;
+}
+.modal.notice .cont {
+  width: 520px;
+  height: 400px;
+}
+.modal.notice .cont .modal-cont p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+.modal.notice .cont .modal-cont p em {
+  color: red;
+  font-weight: bold;
+}
+.modal.notice .cont .modal-cont button {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 15px 8px;
+  border-radius: 5px;
+  background: #503396;
+  color: white;
+  font-size: 1.2em;
+}
+.modal.seeing {
+  position: absolute;
+}
+.modal.seeing .cont {
+  width: 760px;
+  height: 440px;
+}
+.modal.seeing .cont .modal-cont {
+  border-radius: 10px;
+}
+.modal.seeing .cont .modal-cont div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb;
+  background: #f2f4f5;
+  overflow: hidden;
+}
+.modal.seeing .cont .modal-cont div span {
+  font-size: 3em;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid skyblue;
+  color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 0;
+}
+.modal.seeing .cont .modal-cont div p {
+  background: white;
+  padding: 30px;
+  font-size: 1.15em;
+  line-height: 1.4;
+}
+.modal.seeing .cont .modal-cont div p strong {
+  font-size: 1.4em;
+}
+.modal.seeing .cont .modal-cont div p em {
+  color: red;
+}
+.modal.seeing .cont .modal-cont .next-step {
+  padding: 5px 15px 8px;
+  border-radius: 5px;
+  background: #503396;
+  color: white;
+  font-size: 1.2em;
+  position: relative;
+  margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.modal.login {
+  position: fixed;
+  z-index: 10;
+}
+.modal.login .cont {
+  width: 850px;
+  height: 560px;
+}
+.modal.login .cont .modal-cont .type-btn {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+}
+.modal.login .cont .modal-cont .type-btn button {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  border-bottom-color: #503396;
+  font-size: 1.15em;
+  color: #503396;
+}
+.modal.login .cont .modal-cont .type-btn button.active {
+  border-color: #503396;
+  border-bottom: none;
+}
+.modal.login .cont .modal-cont > div:not(.type-btn) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.modal.login .cont .modal-cont .member-login {
+  display: none !important;
+}
+.modal.login .cont .modal-cont .member-login.active {
+  display: grid !important;
+}
+.modal.login .cont .modal-cont .member-login .login-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal.login .cont .modal-cont .member-login .login-form form {
+  display: flex;
+  flex-direction: column;
+}
+.modal.login .cont .modal-cont .member-login .login-form form input {
+  padding: 15px;
+  border: 1px solid #cfcfcf;
+  margin-bottom: 10px;
+}
+.modal.login .cont .modal-cont .member-login .login-form form input:hover {
+  border-color: #444;
+}
+.modal.login .cont .modal-cont .member-login .login-form form div {
+  margin: 10px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1em;
+}
+.modal.login .cont .modal-cont .member-login .login-form form div input[type=checkbox] {
+  margin: 0 5px 0 0;
+  width: 15px;
+  height: 15px;
+}
+.modal.login .cont .modal-cont .member-login .login-form form div label {
+  margin-right: auto;
+}
+.modal.login .cont .modal-cont .member-login .login-form form div a {
+  color: #3d7db7;
+}
+.modal.login .cont .modal-cont .member-login .login-form form div a span {
+  border: 1px solid #3d7db7;
+  font-size: 0.9em;
+  padding: 0 5px;
+  margin-left: 5px;
+}
+.modal.login .cont .modal-cont .member-login .login-form form .login-btn {
+  padding: 15px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+.modal.login .cont .modal-cont .member-login .login-form .login-etc {
+  display: flex;
+  align-items: center;
+  margin: 20px auto 30px;
+}
+.modal.login .cont .modal-cont .member-login .login-form .login-etc a {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+.modal.login .cont .modal-cont .member-login .login-form .login-etc a:hover {
+  text-decoration: underline;
+}
+.modal.login .cont .modal-cont .member-login .login-form .login-etc a:not(:first-child)::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #dbdbdb;
+  display: inline-block;
+  margin: 0 15px;
+}
+.modal.login .cont .modal-cont .member-login .login-form .login-sns {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin: 0 auto;
+}
+.modal.login .cont .modal-cont .member-login .ad-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  height: 380px;
+}
+.modal.login .cont .modal-cont .non-member-login {
+  display: block !important;
+}
+.modal.login .cont .modal-cont .non-member-login.active form {
+  display: grid !important;
+}
+.modal.login .cont .modal-cont .non-member-login form {
+  display: none !important;
+  grid-row-gap: 20px !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form {
+  background: #f3f4f6;
+  padding: 25px 25px 25px 20px;
+  display: grid;
+  grid-template-columns: auto 160px 70px;
+  gap: 15px 10px;
+  align-items: center;
+  font-size: 1.1em;
+  position: relative;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form input {
+  padding: 8px;
+  border: 1px solid #cfcfcf;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form input::-webkit-outer-spin-button, .modal.login .cont .modal-cont .non-member-login form .login-form input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form input:nth-child(2), .modal.login .cont .modal-cont .non-member-login form .login-form input:nth-child(4), .modal.login .cont .modal-cont .non-member-login form .login-form input:nth-last-child(3), .modal.login .cont .modal-cont .non-member-login form .login-form input:last-child {
+  grid-column: span 2;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form .time-count {
+  position: absolute;
+  right: 115px;
+  margin-top: 48px;
+  color: red;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form button {
+  padding: 6px 0 10px;
+  border-radius: 3px;
+  background: #e0e0e0;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement {
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  font-size: 1.05em;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement span {
+  display: block;
+  padding: 15px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement p {
+  padding: 15px;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement p:nth-child(2) {
+  color: #777;
+  line-height: 2;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement p:nth-child(2) em {
+  color: black;
+  margin-right: 8px;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement p:last-child {
+  color: #037b94;
+  position: relative;
+  margin-left: 13px;
+  line-height: 1.5;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement p:last-child::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: #037b94;
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  top: 23px;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement div {
+  margin: 5px 15px 15px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement div input {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement div label {
+  line-height: 1.5;
+  margin-right: 20px;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-btn {
+  grid-column: span 2;
+  width: 60px;
+  padding: 8px 0 12px;
+  border-radius: 5px;
+  margin: auto;
+  background: #e0e0e0;
+  color: #777;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=modal.css.map */

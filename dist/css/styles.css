@@ -44,8 +44,7 @@ header .wrapper .gnb {
   display: flex;
   align-items: center;
 }
-header .wrapper .gnb > button,
-header .wrapper .gnb > a {
+header .wrapper .gnb > button, header .wrapper .gnb > a {
   width: 45px;
   height: 20px;
 }
@@ -348,8 +347,7 @@ header.booking-header .wrapper .gnb > ul:hover .bg {
   background: #339eb2;
 }
 header.booking-header .wrapper .gnb .all-menu-btn {
-  background: url(../../img/header-icon-hamburger-grey.png) no-repeat center
-    left;
+  background: url(../../img/header-icon-hamburger-grey.png) no-repeat center left;
   background-size: contain;
 }
 header.booking-header .wrapper .gnb .search-btn {
@@ -357,8 +355,7 @@ header.booking-header .wrapper .gnb .search-btn {
   background-size: contain;
 }
 header.booking-header .wrapper .gnb .go-booking {
-  background: url(../../img/header-icon-calendar-grey.png) no-repeat center
-    right;
+  background: url(../../img/header-icon-calendar-grey.png) no-repeat center right;
   background-size: contain;
 }
 header.booking-header .wrapper .gnb .mypage-btn {
@@ -598,13 +595,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
 }
 
 .benefit {
-  background: linear-gradient(
-    to top,
-    #503396 0%,
-    #503396 40%,
-    #ffffff 40%,
-    #ffffff 100%
-  );
+  background: linear-gradient(to top, #503396 0%, #503396 40%, #ffffff 40%, #ffffff 100%);
 }
 .benefit .wrapper .title {
   margin-bottom: 10px !important;
@@ -1255,31 +1246,18 @@ header.booking-header .wrapper .gnb .mypage-btn {
 .step-1 .theather .cont .list > ul > li.active .sub-list::-webkit-scrollbar {
   width: 5px;
 }
-.step-1
-  .theather
-  .cont
-  .list
-  > ul
-  > li.active
-  .sub-list::-webkit-scrollbar-track {
+.step-1 .theather .cont .list > ul > li.active .sub-list::-webkit-scrollbar-track {
   border-radius: 3px;
   background-color: #e9e9e9;
 }
-.step-1
-  .theather
-  .cont
-  .list
-  > ul
-  > li.active
-  .sub-list::-webkit-scrollbar-thumb {
+.step-1 .theather .cont .list > ul > li.active .sub-list::-webkit-scrollbar-thumb {
   border-radius: 3px;
   background-color: #bbb;
 }
 .step-1 .theather .cont .list > ul > li.active .sub-list ul li button {
   width: calc(100% - 1px);
 }
-.step-1 .theather .cont .list > ul > li.active .sub-list ul li:hover button,
-.step-1 .theather .cont .list > ul > li.active .sub-list ul li.active button {
+.step-1 .theather .cont .list > ul > li.active .sub-list ul li:hover button, .step-1 .theather .cont .list > ul > li.active .sub-list ul li.active button {
   background: #666666;
   color: white;
 }
@@ -1532,20 +1510,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
   border-left: 1px solid #dbdbdb;
   border-right: 1px solid #dbdbdb;
 }
-.step-2
-  .check-seat
-  .cont
-  .count-cont
-  > div
-  div
-  .result::-webkit-outer-spin-button,
-.step-2
-  .check-seat
-  .cont
-  .count-cont
-  > div
-  div
-  .result::-webkit-inner-spin-button {
+.step-2 .check-seat .cont .count-cont > div div .result::-webkit-outer-spin-button, .step-2 .check-seat .cont .count-cont > div div .result::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0;
@@ -1604,54 +1569,16 @@ header.booking-header .wrapper .gnb .mypage-btn {
   background: url(../../img/seat-disabled.png);
   background-size: cover;
 }
-.step-2
-  .check-seat
-  .cont
-  .seat-cont
-  .seat-btn
-  .row:not(:nth-last-child(2)):not(:last-child)
-  button:nth-child(4),
-.step-2
-  .check-seat
-  .cont
-  .seat-cont
-  .seat-btn
-  .row:not(:nth-last-child(2)):not(:last-child)
-  button:nth-child(14) {
+.step-2 .check-seat .cont .seat-cont .seat-btn .row:not(:nth-last-child(2)):not(:last-child) button:nth-child(4), .step-2 .check-seat .cont .seat-cont .seat-btn .row:not(:nth-last-child(2)):not(:last-child) button:nth-child(14) {
   margin-left: 20px;
 }
-.step-2
-  .check-seat
-  .cont
-  .seat-cont
-  .seat-btn
-  .row:nth-last-child(2)
-  button:nth-child(3),
-.step-2
-  .check-seat
-  .cont
-  .seat-cont
-  .seat-btn
-  .row:nth-last-child(2)
-  button:nth-child(13) {
+.step-2 .check-seat .cont .seat-cont .seat-btn .row:nth-last-child(2) button:nth-child(3), .step-2 .check-seat .cont .seat-cont .seat-btn .row:nth-last-child(2) button:nth-child(13) {
   margin-left: 20px;
 }
-.step-2
-  .check-seat
-  .cont
-  .seat-cont
-  .seat-btn
-  .row:last-child
-  button:nth-child(5) {
+.step-2 .check-seat .cont .seat-cont .seat-btn .row:last-child button:nth-child(5) {
   margin-right: 23px;
 }
-.step-2
-  .check-seat
-  .cont
-  .seat-cont
-  .seat-btn
-  .row:last-child
-  button:nth-child(6) {
+.step-2 .check-seat .cont .seat-cont .seat-btn .row:last-child button:nth-child(6) {
   margin-left: 23px;
 }
 .step-2 .check-seat .cont .seat-cont .first-seen {
@@ -2016,14 +1943,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
   justify-content: space-between;
   font-size: 1.1em;
 }
-.modal.login
-  .cont
-  .modal-cont
-  .member-login
-  .login-form
-  form
-  div
-  input[type="checkbox"] {
+.modal.login .cont .modal-cont .member-login .login-form form div input[type=checkbox] {
   margin: 0 5px 0 0;
   width: 15px;
   height: 15px;
@@ -2059,13 +1979,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
 .modal.login .cont .modal-cont .member-login .login-form .login-etc a:hover {
   text-decoration: underline;
 }
-.modal.login
-  .cont
-  .modal-cont
-  .member-login
-  .login-form
-  .login-etc
-  a:not(:first-child)::before {
+.modal.login .cont .modal-cont .member-login .login-form .login-etc a:not(:first-child)::before {
   content: "";
   width: 1px;
   height: 15px;
@@ -2113,53 +2027,13 @@ header.booking-header .wrapper .gnb .mypage-btn {
   padding: 8px;
   border: 1px solid #cfcfcf;
 }
-.modal.login
-  .cont
-  .modal-cont
-  .non-member-login
-  form
-  .login-form
-  input::-webkit-outer-spin-button,
-.modal.login
-  .cont
-  .modal-cont
-  .non-member-login
-  form
-  .login-form
-  input::-webkit-inner-spin-button {
+.modal.login .cont .modal-cont .non-member-login form .login-form input::-webkit-outer-spin-button, .modal.login .cont .modal-cont .non-member-login form .login-form input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0;
   /* <-- Apparently some margin are still there even though it's hidden */
 }
-.modal.login
-  .cont
-  .modal-cont
-  .non-member-login
-  form
-  .login-form
-  input:nth-child(2),
-.modal.login
-  .cont
-  .modal-cont
-  .non-member-login
-  form
-  .login-form
-  input:nth-child(4),
-.modal.login
-  .cont
-  .modal-cont
-  .non-member-login
-  form
-  .login-form
-  input:nth-last-child(3),
-.modal.login
-  .cont
-  .modal-cont
-  .non-member-login
-  form
-  .login-form
-  input:last-child {
+.modal.login .cont .modal-cont .non-member-login form .login-form input:nth-child(2), .modal.login .cont .modal-cont .non-member-login form .login-form input:nth-child(4), .modal.login .cont .modal-cont .non-member-login form .login-form input:nth-last-child(3), .modal.login .cont .modal-cont .non-member-login form .login-form input:last-child {
   grid-column: span 2;
 }
 .modal.login .cont .modal-cont .non-member-login form .login-form .time-count {
@@ -2186,24 +2060,11 @@ header.booking-header .wrapper .gnb .mypage-btn {
 .modal.login .cont .modal-cont .non-member-login form .agreement p {
   padding: 15px;
 }
-.modal.login
-  .cont
-  .modal-cont
-  .non-member-login
-  form
-  .agreement
-  p:nth-child(2) {
+.modal.login .cont .modal-cont .non-member-login form .agreement p:nth-child(2) {
   color: #777;
   line-height: 2;
 }
-.modal.login
-  .cont
-  .modal-cont
-  .non-member-login
-  form
-  .agreement
-  p:nth-child(2)
-  em {
+.modal.login .cont .modal-cont .non-member-login form .agreement p:nth-child(2) em {
   color: black;
   margin-right: 8px;
 }
@@ -2213,13 +2074,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
   margin-left: 13px;
   line-height: 1.5;
 }
-.modal.login
-  .cont
-  .modal-cont
-  .non-member-login
-  form
-  .agreement
-  p:last-child::before {
+.modal.login .cont .modal-cont .non-member-login form .agreement p:last-child::before {
   content: "";
   width: 5px;
   height: 5px;
