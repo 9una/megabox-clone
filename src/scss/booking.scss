@@ -1,42 +1,5 @@
 .booking {
   padding-top: 90px;
-  .location {
-    width: 100%;
-    padding: 15px 0;
-    background: #f8f8fa;
-    transition: all 0.1s;
-    &.fixed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 3;
-      background: #444;
-      a,
-      i {
-        color: #f2f2f2 !important;
-      }
-    }
-    .wrapper {
-      @include flex-align-center;
-      a {
-        font-size: 1.15em;
-        i {
-          color: #aaa;
-          font-size: 0.9em;
-        }
-        &:not(:first-child) {
-          &::before {
-            content: "";
-            display: inline-block;
-            margin: 0 10px;
-            width: 5px;
-            height: 10px;
-            background: url(../../img/icon-before-right.png) no-repeat center;
-          }
-        }
-      }
-    }
-  }
   main {
     padding: 40px 0 80px;
     position: relative;

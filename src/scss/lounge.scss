@@ -1,40 +1,444 @@
 .lounge {
+  padding-top: 90px;
   main {
+    padding: 40px 0 80px;
     .wrapper {
       .title {
+        margin-bottom: 30px;
+        h3 {
+          font-size: 2.1em;
+          font-weight: normal;
+        }
       }
       .type-btn {
-        button {
+        width: 100%;
+        margin-bottom: 40px;
+        @include flex-align-center;
+        a {
+          padding: 13px;
+          text-align: center;
+          font-size: 1.2em;
+          width: 50%;
+          border: 1px solid #dbdbdb;
+          border-bottom-color: $purple;
           &.active {
+            border-color: $purple;
+            border-bottom-color: white;
+            color: $purple;
           }
         }
       }
       section {
+        padding-top: 50px;
         h4 {
+          font-size: 1.7em;
+          font-weight: normal;
+          color: $purple;
+          margin: 20px 0 20px;
         }
         //멤버십
         &.title-banner {
+          border: 1px solid #dbdbdb;
+          width: 100%;
+          padding: 35px;
+          text-align: center;
+          background: url(../../img/bg-slash.png) repeat center;
+          border-radius: 10px;
+          h3 {
+            font-size: 2.5em;
+            color: $purple;
+            margin-bottom: 15px;
+          }
+          p {
+            font-size: 1.15em;
+          }
         }
         &.membership-benefit {
+          .box-cont {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            article {
+              @include article-type;
+              span {
+                margin: 0;
+                &::before {
+                  content: "";
+                  width: 4px;
+                  height: 4px;
+                  border-radius: 50%;
+                  background: $purple;
+                  display: inline-block;
+                  margin-right: 5px;
+                  margin-bottom: 4px;
+                }
+              }
+            }
+          }
+          ul {
+            @include list-type;
+            .text-cont {
+              padding: 30px;
+              background: #f2f4f5;
+              color: $bookgreen;
+              font-size: 1.25em;
+              line-height: 1.5;
+            }
+          }
         }
-        &#accumulate {
+        &#accumulate,
+        &.expiration,
+        &#birthday {
+          article {
+            h6 {
+              @include list-title;
+            }
+            ul {
+              // margin-bottom: 30px;
+              @include list-type;
+            }
+          }
         }
         &#use {
-        }
-        &.expiration {
-        }
-        &#birthday {
+          article {
+            h6 {
+              @include list-title;
+            }
+            ul {
+              @include list-type;
+              table {
+                margin: 20px 0 30px;
+                width: 100%;
+                border-top: 2px solid black;
+                text-align: center;
+                tr {
+                  border-bottom: 1px solid #e9e9e9;
+                  th {
+                    background: #f9f9f9;
+                    font-weight: bold;
+                    &:not(:first-child) {
+                      width: 29%;
+                    }
+                    &:last-child {
+                      width: 30%;
+                    }
+                  }
+                  th,
+                  td {
+                    padding: 12px 0;
+                    vertical-align: middle;
+                    &:not(:last-child) {
+                      border-right: 1px solid #e9e9e9;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
         &.card {
+          article {
+            h6 {
+              @include list-title;
+            }
+            ul {
+              @include list-type;
+              .card-cont {
+                width: 100%;
+                padding: 30px;
+                background: #f2f4f5;
+                text-align: center;
+              }
+            }
+          }
         }
+
         //vip라운지
         &.vip-level {
-        }
-        &.vip-event {
+          height: 344px;
+          background: url(../../img/vip-bg.png) no-repeat center;
+          background-size: contain;
+          display: grid;
+          grid-template-columns: 340px auto;
+          padding: 0;
+          margin-bottom: 80px;
+          & > div {
+            @include flex-center;
+            flex-direction: column;
+            gap: 20px;
+            h2 {
+              font-size: 2.5em;
+              font-weight: normal;
+            }
+            p {
+              font-size: 1.15em;
+            }
+            i {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              @include flex-center;
+              color: #999;
+              border: 1px solid #bbb;
+              font-size: 5em;
+            }
+            button {
+              padding: 10px 30px;
+              border: 1px solid #bbb;
+              border-radius: 5px;
+            }
+          }
         }
         &.vip-selection {
+          article {
+            h6 {
+              @include list-title;
+            }
+            .box-cont {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 20px;
+              & > div {
+                border: 1px solid #e9e9e9;
+                border-radius: 10px;
+                &:not(.period) {
+                  @include article-type;
+                  padding: 25px 20px;
+                  gap: 10px 20px;
+                  grid-template-rows: 25px auto;
+                  .img {
+                    grid-row: span 2;
+                    img {
+                      margin-top: 20px;
+                    }
+                  }
+                }
+                &.period {
+                  font-size: 1.15em;
+                  padding: 20px;
+                  grid-column: span 3;
+                  background: #f9f9f9;
+                  @include flex-center;
+                  gap: 30px;
+                  margin-bottom: 15px;
+                  span {
+                    &::before {
+                      content: "";
+                      width: 3px;
+                      height: 3px;
+                      margin: 0 4px 4px 0;
+                      border-radius: 50%;
+                      display: inline-block;
+                      background: #444;
+                    }
+                  }
+                }
+              }
+            }
+            ul {
+              @include list-type;
+            }
+          }
         }
         &.vip-benefit {
+          article {
+            h6 {
+              @include list-title;
+              margin-top: 0;
+              display: inline-block;
+              &::after {
+                content: "";
+                width: 1px;
+                height: 12px;
+                background: #bbb;
+                margin: 0 10px 0 13px;
+                display: inline-block;
+              }
+            }
+            & > span {
+              display: inline-block;
+              vertical-align: middle;
+              margin-bottom: 5px;
+              font-size: 1.1em;
+              b {
+                color: $bookgreen;
+              }
+            }
+            .box-cont {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 40px;
+              margin-bottom: 15px;
+              & > div {
+                @include flex-align-center;
+                gap: 40px;
+                padding-left: 50px;
+                height: 171px;
+                background: url(../../img/vip-cont-bg.png) no-repeat center;
+                background-size: contain;
+                p {
+                  font-size: 1.15em;
+                  strong {
+                    display: block;
+                    font-size: 1.3em;
+                    font-weight: normal;
+                    color: $purple;
+                    margin-bottom: 10px;
+                  }
+                }
+              }
+            }
+            .mission-bn {
+              border: 1px solid #e9e9e9;
+              border-radius: 10px;
+              padding: 40px 180px;
+              display: grid;
+              gap: 5px;
+              grid-template-columns: auto 200px 200px auto 200px;
+              margin-bottom: 15px;
+              img,
+              i,
+              span:nth-last-child(3) {
+                grid-row: span 2;
+              }
+              span {
+                font-size: 1.1em;
+                @include flex-center;
+                &.grey {
+                  border-radius: 30px;
+                  background: #f2f4f4;
+                }
+              }
+              i {
+                background: url(../../img/vip-plus-circle.png) no-repeat center;
+              }
+            }
+            .vip-day-point {
+              background: #f9f9f9;
+              padding: 40px;
+              margin-bottom: 15px;
+              border-radius: 10px;
+              @include flex-center;
+              div {
+                @include flex-align-center;
+                flex-direction: column;
+              }
+              i {
+                width: 50px;
+                height: 50px;
+                background: url(../../img/vip-plus.png) no-repeat center;
+              }
+            }
+            ul {
+              @include list-type;
+              margin-bottom: 40px;
+            }
+            a {
+              background: $purple;
+              color: white;
+              display: inline-block;
+              padding: 15px 30px;
+              border-radius: 5px;
+              font-size: 1.15em;
+              position: relative;
+              left: 50%;
+              transform: translateX(-50%);
+              margin: -30px 0 50px;
+            }
+            &.jmembership {
+              .jmembership-benefit {
+                background: #f9f9f9;
+                padding: 40px;
+                margin-bottom: 15px;
+                border-radius: 10px;
+                display: grid;
+                grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+                align-items: center;
+                div {
+                  @include flex-align-center;
+                  flex-direction: column;
+                }
+                i {
+                  width: 50px;
+                  height: 50px;
+                  background: url(../../img/vip-plus.png) no-repeat center;
+                }
+              }
+              .link-btn {
+                @include flex-center;
+                gap: 10px;
+                position: relative;
+                margin: -20px 0 50px;
+                a {
+                  left: initial;
+                  margin: 0;
+                  transform: initial;
+                  &.white {
+                    background: white;
+                    border: 1px solid $purple;
+                    color: $purple;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .vip-event {
+      // wrapper 밖 section
+      width: 100%;
+      background: #f2f4f5;
+      .wrapper {
+        position: relative;
+        h4 {
+        }
+        .pagination {
+        }
+        .slide {
+          width: 100%;
+          overflow: hidden;
+          ul {
+            display: flex;
+            li {
+              width: 530px;
+              margin-right: 30px; //그림자때매 40에서 30으로
+              a {
+                width: 100%;
+                .img {
+                  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+                  img {
+                  }
+                }
+                .text {
+                  padding: 15px 10px 0;
+                  @include flex-align-center;
+                  justify-content: space-between;
+                  p {
+                  }
+                  span {
+                  }
+                }
+              }
+            }
+          }
+        }
+        button {
+          position: absolute;
+          bottom: 50%;
+          width: 50px;
+          height: 50px;
+          background: white;
+          border-radius: 50%;
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+          font-size: 1.5em;
+          color: #666;
+          &.prev-btn {
+            left: -25px;
+          }
+          &.next-btn {
+            right: -25px;
+          }
         }
       }
     }

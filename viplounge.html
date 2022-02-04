@@ -37,10 +37,12 @@
                     <div>
                         <i>?</i>
                         <p>로그인 후 메가박스 등급을 확인하세요.</p>
-                        <button type="button" onclick="modalLogin()" class="login-btn">로그인</button>
+                        <button type="button" onclick="callLogin()" class="login-btn">로그인</button>
                     </div>
                 </section>
-                <section class="vip-event">
+            </div>
+            <section class="vip-event">
+                <div class="wrapper">
                     <h4>VIP 회원님을 위한 특별한 이벤트!!</h4>
                     <div class="pagination">
                         pagination
@@ -139,28 +141,36 @@
                     </div>
                     <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i></button>
                     <button type="button" class="next-btn"><i class="fas fa-arrow-right"></i></button>
-                </section>
+                </div>
+            </section>
+            <div class="wrapper">
                 <section class="vip-selection">
                     <h4>VIP 선정 기준</h4>
                     <article>
                         <h6>2021년 VIP 선정 기준</h6>
-                        <div>
+                        <div class="box-cont">
                             <div>
-                                <img src="img/vip-vip.png" alt="VIP" />
-                                <strong>VIP</strong>
-                                <p>2020년 VIP 회원 중 연 1편 이상 유료 관람<br>또는<br>2020년 일반 회원 중 2020년 11월 ~ 2021년 1월 6편 이상 유료 관람</p>
+                                <div class="img">
+                                    <img src="img/vip-vip.png" alt="VIP" />
+                                </div>
+                                <h5>VIP</h5>
+                                <p>2020년 VIP 회원 중 연 1편 이상 유료 관람<br>또는 2020년 일반 회원 중 2020년 11월 ~ 2021년 1월 6편 이상 유료 관람</p>
                             </div>
                             <div>
-                                <img src="img/vip-premium.png" alt="VIP PREMIUM" />
-                                <strong>VIP PREMIUM</strong>
+                                <div class="img">
+                                    <img src="img/vip-premium.png" alt="VIP PREMIUM" />
+                                </div>
+                                <h5>VIP PREMIUM</h5>
                                 <p>2020년 누적 승급포인트<br>1.1만 포인트 이상</p>
                             </div>
                             <div>
-                                <img src="img/vip-vvip.png" alt="VVIP" />
-                                <strong>VVIP</strong>
+                                <div class="img">
+                                    <img src="img/vip-vvip.png" alt="VVIP" />
+                                </div>
+                                <h5>VVIP</h5>
                                 <p>2020년 누적 승급포인트<br>2.7만 포인트 이상<br>또는 서로 다른 영화 50편 이상</p>
                             </div>
-                            <div>
+                            <div class="period">
                                 <span>선정기간 : 2020.01.01 ~ 2020.12.31 (상영일 기준)</span>
                                 <span>자격기간 : 2021.03.02 ~ 2022.02.28 (상영일 기준)</span>
                             </div>
@@ -174,21 +184,29 @@
                         </ul>
                     </article>
                 </section>
-                <section id="vip-benefit">
+                <section class="vip-benefit">
                     <h4>VIP 멤버십 혜택</h4>
                     <article>
                         <h6>VIP 쿠폰북</h6>
                         <span>회원님의 취향에 따라 원하시는 쿠폰을 선택하시고 다운 받으세요!</span>
-                        <div>
+                        <div class="box-cont">
                             <div>
-                                <img src="img/vip-movie.png" alt="영화" />
-                                <strong>영화</strong>
-                                <p>VIP 영화관람 쿠폰</p>
+                                <div class="img">
+                                    <img src="img/vip-movie.png" alt="영화" />
+                                </div>
+                                <p>
+                                    <strong>영화</strong>
+                                    VIP 영화관람 쿠폰
+                                </p>
                             </div>
                             <div>
-                                <img src="img/vip-store.png" alt="매점" />
-                                <strong>매점</strong>
-                                <p>VIP 매점이용 쿠폰</p>
+                                <div class="img">
+                                    <img src="img/vip-store.png" alt="매점" />
+                                </div>
+                                <p>
+                                    <strong>매점</strong>
+                                    VIP 매점이용 쿠폰
+                                </p>
                             </div>
                         </div>
                         <ul>
@@ -201,22 +219,30 @@
                     <article>
                         <h6>5년 연속 VIP 혜택</h6>
                         <span>축하드립니다! <b>5년 연속 VIP 회원</b>에게 추가 혜택을 드립니다</span>
-                        <div>
+                        <div class="box-cont">
                             <div>
-                                <img src="img/vip-movie.png" alt="VIP PREMIUM, VVIP 등급" />
-                                <strong>VIP PREMIUM, VVIP 등급</strong>
-                                <p>메가박스 라이프 다이어리 1권</p>
+                                <div class="img">
+                                    <img src="img/vip-movie.png" alt="VIP PREMIUM, VVIP 등급" />
+                                </div>
+                                <p>
+                                    <strong>VIP PREMIUM, VVIP 등급</strong>
+                                    메가박스 라이프 다이어리 1권
+                                </p>
                             </div>
                             <div>
-                                <img src="img/membership-use.png" alt="VIP 등급" />
-                                <strong>VIP 등급</strong>
-                                <p>영화 8천원 관람 쿠폰 2매</p>
+                                <div class="img">
+                                    <img src="img/membership-use.png" alt="VIP 등급" />
+                                </div>
+                                <p>
+                                    <strong>VIP 등급</strong>
+                                    영화 8천원 관람 쿠폰 2매
+                                </p>
                             </div>
                         </div>
                         <ul>
                             <li>지난 VIP 등급 이력은 로그인 후 나의 메가박스 > 지난등급조회에서 확인 가능합니다.</li>
                             <li>쿠폰은 로그인 후 나의 메가박스 > 할인/제휴쿠폰에서 확인하실 수 있습니다.</li>
-                            <li>5년 연속 VIP 회원 중, 2021년 VVIP, VIPP 등급 회원님께 “메가박스 라이프 다이어리＂교환 쿠폰을 드립니다. (교환 가능 기간 : 2021. 3. 31)</li>
+                            <li>5년 연속 VIP 회원 중, 2021년 VVIP, VIPP 등급 회원님께 “메가박스 라이프 다이어리" 교환 쿠폰을 드립니다. (교환 가능 기간 : 2021. 3. 31)</li>
                             <li>5년 연속 VIP 회원 중, 2021년 VIP 등급 회원이 2021년 3월 31일까지 “VIP 쿠폰북”을 정상 발급 받은 경우 4월 초 영화 쿠폰이 추가 지급됩니다. (쿠폰 유효 기간 : 2021. 6. 30)</li>
                         </ul>
                     </article>
@@ -274,10 +300,10 @@
                             <li>지급되는 쿠폰 혜택은 변경될 수 있습니다.</li>
                         </ul>
                     </article>
-                    <article>
+                    <article class="jmembership">
                         <h6>중앙멤버십 혜택</h6>
                         <span>리조트 할인, CU 모바일 상품권 등 다양한 혜택을 받을 수 있는 중앙멤버십 카드를 신청하세요!</span>
-                        <div class="j-benefit">
+                        <div class="jmembership-benefit">
                             <div>
                                 <img src="img/vip-resort.png" alt="리조트회원 우대" />
                                 <span>리조트회원 우대</span>
@@ -303,22 +329,32 @@
                             <li>중앙멤버십 카드는 VIP 기신청자의 경우 자동 연장되며 휴대폰 번호당 1개만 발급 가능합니다.</li>
                             <li>제휴 혜택은 사정에 따라 변경되거나 종료될 수 있습니다.</li>
                         </ul>
-                        <a href="#;" class="white">중앙멤버십 상세 안내</a>
-                        <a href="#;">카드 신청하기</a>
+                        <div class="link-btn">
+                            <a href="#;" class="white">중앙멤버십 상세 안내</a>
+                            <a href="#;">카드 신청하기</a>
+                        </div>
                     </article>
                     <article>
                         <h6>VIP CULTURE EVENT </h6>
                         <span>MEET PLAY SHARE 메가박스에서 당신의 문화생활을 위해 준비했어요~</span>
-                        <div>
+                        <div class="box-cont">
                             <div>
-                                <img src="img/kyobo.png" alt="교보문고" />
-                                <strong>교보문고</strong>
-                                <p>10% 할인 쿠폰</p>
+                                <div class="img">
+                                    <img src="img/kyobo.png" alt="교보문고" />
+                                </div>
+                                <p>
+                                    <strong>교보문고</strong>
+                                    10% 할인 쿠폰
+                                </p>
                             </div>
                             <div>
-                                <img src="img/hottracks.png" alt="핫트랙스" />
-                                <strong>핫트랙스</strong>
-                                <p>10% 할인 쿠폰</p>
+                                <div class="img">
+                                    <img src="img/hottracks.png" alt="핫트랙스" />
+                                </div>
+                                <p>
+                                    <strong>핫트랙스</strong>
+                                    10% 할인 쿠폰
+                                </p>
                             </div>
                         </div>
                         <ul>
