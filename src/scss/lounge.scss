@@ -1,0 +1,42 @@
+.lounge {
+  main {
+    .wrapper {
+      .title {
+      }
+      .type-btn {
+        button {
+          &.active {
+          }
+        }
+      }
+      section {
+        h4 {
+        }
+        //멤버십
+        &.title-banner {
+        }
+        &.membership-benefit {
+        }
+        &#accumulate {
+        }
+        &#use {
+        }
+        &.expiration {
+        }
+        &#birthday {
+        }
+        &.card {
+        }
+        //vip라운지
+        &.vip-level {
+        }
+        &.vip-event {
+        }
+        &.vip-selection {
+        }
+        &.vip-benefit {
+        }
+      }
+    }
+  }
+}
