@@ -1,4 +1,4 @@
-function slideBanner(){
+function slideBanner() {
     let curPos = 0;
     const slide = document.querySelector('#slide-bn .slide'),
         item = slide.querySelectorAll('li'),

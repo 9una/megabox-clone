@@ -44,7 +44,8 @@ header .wrapper .gnb {
   display: flex;
   align-items: center;
 }
-header .wrapper .gnb > button, header .wrapper .gnb > a {
+header .wrapper .gnb > button,
+header .wrapper .gnb > a {
   width: 45px;
   height: 20px;
 }
@@ -347,7 +348,8 @@ header.booking-header .wrapper .gnb > ul:hover .bg {
   background: #339eb2;
 }
 header.booking-header .wrapper .gnb .all-menu-btn {
-  background: url(../../img/header-icon-hamburger-grey.png) no-repeat center left;
+  background: url(../../img/header-icon-hamburger-grey.png) no-repeat center
+    left;
   background-size: contain;
 }
 header.booking-header .wrapper .gnb .search-btn {
@@ -355,7 +357,8 @@ header.booking-header .wrapper .gnb .search-btn {
   background-size: contain;
 }
 header.booking-header .wrapper .gnb .go-booking {
-  background: url(../../img/header-icon-calendar-grey.png) no-repeat center right;
+  background: url(../../img/header-icon-calendar-grey.png) no-repeat center
+    right;
   background-size: contain;
 }
 header.booking-header .wrapper .gnb .mypage-btn {
@@ -595,7 +598,13 @@ header.booking-header .wrapper .gnb .mypage-btn {
 }
 
 .benefit {
-  background: linear-gradient(to top, #503396 0%, #503396 40%, #ffffff 40%, #ffffff 100%);
+  background: linear-gradient(
+    to top,
+    #503396 0%,
+    #503396 40%,
+    #ffffff 40%,
+    #ffffff 100%
+  );
 }
 .benefit .wrapper .title {
   margin-bottom: 10px !important;
@@ -704,7 +713,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
   grid-template-columns: repeat(5, 1fr);
 }
 .benefit .wrapper .tab a {
-  padding: 50px 0 0;
+  padding: 70px 0 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1153,7 +1162,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
 }
 .step-1 .movie .cont .list::-webkit-scrollbar-thumb {
   border-radius: 3px;
-  background-color: #777;
+  background-color: #bbb;
 }
 .step-1 .movie .cont .list ul li {
   width: calc(100% - 1px);
@@ -1169,6 +1178,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
 .step-1 .movie .cont .list ul li button p {
   margin-right: auto;
   text-align: left;
+  width: 75%;
   font-size: 0.9em;
 }
 .step-1 .movie .cont .list ul li button i {
@@ -1180,6 +1190,12 @@ header.booking-header .wrapper .gnb .mypage-btn {
 .step-1 .movie .cont .list ul li.active button p {
   color: white;
 }
+.step-1 .movie .cont .list ul li:not(.active):hover {
+  background: #dbdbdb;
+}
+.step-1 .movie .cont .list ul li:not(.active):hover button i {
+  color: white;
+}
 .step-1 .movie .cont-checked {
   grid-template-columns: repeat(3, 63px);
 }
@@ -1189,10 +1205,6 @@ header.booking-header .wrapper .gnb .mypage-btn {
 }
 .step-1 .movie .cont-checked .item.checked:nth-child(1) {
   background: url(../../img/post-sm.jpg) no-repeat center;
-  background-size: cover;
-}
-.step-1 .movie .cont-checked .item.checked:nth-child(2) {
-  background: url(../../img/post-km.jpg) no-repeat center;
   background-size: cover;
 }
 .step-1 .movie .cont-checked .item.checked button {
@@ -1222,6 +1234,9 @@ header.booking-header .wrapper .gnb .mypage-btn {
   left: 100%;
   top: 0;
 }
+.step-1 .theather .cont .list > ul > li:hover > button {
+  background: #f9f9f9;
+}
 .step-1 .theather .cont .list > ul > li.active > button {
   background: #ebebeb;
 }
@@ -1240,17 +1255,30 @@ header.booking-header .wrapper .gnb .mypage-btn {
 .step-1 .theather .cont .list > ul > li.active .sub-list::-webkit-scrollbar {
   width: 5px;
 }
-.step-1 .theather .cont .list > ul > li.active .sub-list::-webkit-scrollbar-track {
+.step-1
+  .theather
+  .cont
+  .list
+  > ul
+  > li.active
+  .sub-list::-webkit-scrollbar-track {
   border-radius: 3px;
   background-color: #e9e9e9;
 }
-.step-1 .theather .cont .list > ul > li.active .sub-list::-webkit-scrollbar-thumb {
+.step-1
+  .theather
+  .cont
+  .list
+  > ul
+  > li.active
+  .sub-list::-webkit-scrollbar-thumb {
   border-radius: 3px;
-  background-color: #777;
+  background-color: #bbb;
 }
 .step-1 .theather .cont .list > ul > li.active .sub-list ul li button {
   width: calc(100% - 1px);
 }
+.step-1 .theather .cont .list > ul > li.active .sub-list ul li:hover button,
 .step-1 .theather .cont .list > ul > li.active .sub-list ul li.active button {
   background: #666666;
   color: white;
@@ -1351,7 +1379,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
   color: white;
 }
 .step-1 .time .time-btn .wrap button.past {
-  color: #999;
+  color: #bbb;
   cursor: initial;
 }
 .step-1 .time .time-btn .wrap button.now {
@@ -1372,7 +1400,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
 }
 .step-1 .time .cont::-webkit-scrollbar-thumb {
   border-radius: 3px;
-  background-color: #777;
+  background-color: #bbb;
 }
 .step-1 .time .cont ul li {
   padding: 7px 7px 7px 28px;
@@ -1504,7 +1532,20 @@ header.booking-header .wrapper .gnb .mypage-btn {
   border-left: 1px solid #dbdbdb;
   border-right: 1px solid #dbdbdb;
 }
-.step-2 .check-seat .cont .count-cont > div div .result::-webkit-outer-spin-button, .step-2 .check-seat .cont .count-cont > div div .result::-webkit-inner-spin-button {
+.step-2
+  .check-seat
+  .cont
+  .count-cont
+  > div
+  div
+  .result::-webkit-outer-spin-button,
+.step-2
+  .check-seat
+  .cont
+  .count-cont
+  > div
+  div
+  .result::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0;
@@ -1563,16 +1604,54 @@ header.booking-header .wrapper .gnb .mypage-btn {
   background: url(../../img/seat-disabled.png);
   background-size: cover;
 }
-.step-2 .check-seat .cont .seat-cont .seat-btn .row:not(:nth-last-child(2)):not(:last-child) button:nth-child(4), .step-2 .check-seat .cont .seat-cont .seat-btn .row:not(:nth-last-child(2)):not(:last-child) button:nth-child(14) {
+.step-2
+  .check-seat
+  .cont
+  .seat-cont
+  .seat-btn
+  .row:not(:nth-last-child(2)):not(:last-child)
+  button:nth-child(4),
+.step-2
+  .check-seat
+  .cont
+  .seat-cont
+  .seat-btn
+  .row:not(:nth-last-child(2)):not(:last-child)
+  button:nth-child(14) {
   margin-left: 20px;
 }
-.step-2 .check-seat .cont .seat-cont .seat-btn .row:nth-last-child(2) button:nth-child(3), .step-2 .check-seat .cont .seat-cont .seat-btn .row:nth-last-child(2) button:nth-child(13) {
+.step-2
+  .check-seat
+  .cont
+  .seat-cont
+  .seat-btn
+  .row:nth-last-child(2)
+  button:nth-child(3),
+.step-2
+  .check-seat
+  .cont
+  .seat-cont
+  .seat-btn
+  .row:nth-last-child(2)
+  button:nth-child(13) {
   margin-left: 20px;
 }
-.step-2 .check-seat .cont .seat-cont .seat-btn .row:last-child button:nth-child(5) {
+.step-2
+  .check-seat
+  .cont
+  .seat-cont
+  .seat-btn
+  .row:last-child
+  button:nth-child(5) {
   margin-right: 23px;
 }
-.step-2 .check-seat .cont .seat-cont .seat-btn .row:last-child button:nth-child(6) {
+.step-2
+  .check-seat
+  .cont
+  .seat-cont
+  .seat-btn
+  .row:last-child
+  button:nth-child(6) {
   margin-left: 23px;
 }
 .step-2 .check-seat .cont .seat-cont .first-seen {
@@ -1753,6 +1832,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
 .step-2 .check-info .step-btn {
   width: 100%;
   display: flex;
+  background: #e0e0e0;
 }
 .step-2 .check-info .step-btn button {
   width: 50%;
@@ -1763,7 +1843,6 @@ header.booking-header .wrapper .gnb .mypage-btn {
   background: #53565b;
 }
 .step-2 .check-info .step-btn button.next {
-  background: #e0e0e0;
   color: #333;
 }
 
@@ -1825,24 +1904,61 @@ header.booking-header .wrapper .gnb .mypage-btn {
   color: white;
   font-size: 1.2em;
 }
-.modal .seeing .cont .modal-cont div {
-  display: grid;
-  grid-template-columns: 2fr 8fr;
-  border-radius: 8px;
+.modal.seeing {
+  position: absolute;
 }
-.modal .seeing .cont .modal-cont div span {
+.modal.seeing .cont {
+  width: 760px;
+  height: 440px;
+}
+.modal.seeing .cont .modal-cont {
+  border-radius: 10px;
+}
+.modal.seeing .cont .modal-cont div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb;
+  background: #f2f4f5;
+  overflow: hidden;
+}
+.modal.seeing .cont .modal-cont div span {
   font-size: 3em;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 2px solid skyblue;
+  color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 0;
 }
-.modal .seeing .cont .modal-cont div p {
+.modal.seeing .cont .modal-cont div p {
   background: white;
+  padding: 30px;
+  font-size: 1.15em;
+  line-height: 1.4;
+}
+.modal.seeing .cont .modal-cont div p strong {
+  font-size: 1.4em;
+}
+.modal.seeing .cont .modal-cont div p em {
+  color: red;
+}
+.modal.seeing .cont .modal-cont .next-step {
+  padding: 5px 15px 8px;
+  border-radius: 5px;
+  background: #503396;
+  color: white;
+  font-size: 1.2em;
+  position: relative;
+  margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .modal.login {
   position: fixed;
-  display: block;
   z-index: 10;
 }
 .modal.login .cont {
@@ -1866,10 +1982,16 @@ header.booking-header .wrapper .gnb .mypage-btn {
   border-color: #503396;
   border-bottom: none;
 }
-.modal.login .cont .modal-cont .member-login {
-  display: none;
+.modal.login .cont .modal-cont > div:not(.type-btn) {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+}
+.modal.login .cont .modal-cont .member-login {
+  display: none !important;
+}
+.modal.login .cont .modal-cont .member-login.active {
+  display: grid !important;
 }
 .modal.login .cont .modal-cont .member-login .login-form {
   display: flex;
@@ -1894,7 +2016,14 @@ header.booking-header .wrapper .gnb .mypage-btn {
   justify-content: space-between;
   font-size: 1.1em;
 }
-.modal.login .cont .modal-cont .member-login .login-form form div input[type=checkbox] {
+.modal.login
+  .cont
+  .modal-cont
+  .member-login
+  .login-form
+  form
+  div
+  input[type="checkbox"] {
   margin: 0 5px 0 0;
   width: 15px;
   height: 15px;
@@ -1930,7 +2059,13 @@ header.booking-header .wrapper .gnb .mypage-btn {
 .modal.login .cont .modal-cont .member-login .login-form .login-etc a:hover {
   text-decoration: underline;
 }
-.modal.login .cont .modal-cont .member-login .login-form .login-etc a:not(:first-child)::before {
+.modal.login
+  .cont
+  .modal-cont
+  .member-login
+  .login-form
+  .login-etc
+  a:not(:first-child)::before {
   content: "";
   width: 1px;
   height: 15px;
@@ -1953,9 +2088,176 @@ header.booking-header .wrapper .gnb .mypage-btn {
   height: 380px;
 }
 .modal.login .cont .modal-cont .non-member-login {
-  display: grid;
+  display: block !important;
+}
+.modal.login .cont .modal-cont .non-member-login.active form {
+  display: grid !important;
+}
+.modal.login .cont .modal-cont .non-member-login form {
+  display: none !important;
+  grid-row-gap: 20px !important;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form {
+  background: #f3f4f6;
+  padding: 25px 25px 25px 20px;
+  display: grid;
+  grid-template-columns: auto 160px 70px;
+  gap: 15px 10px;
+  align-items: center;
+  font-size: 1.1em;
+  position: relative;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form input {
+  padding: 8px;
+  border: 1px solid #cfcfcf;
+}
+.modal.login
+  .cont
+  .modal-cont
+  .non-member-login
+  form
+  .login-form
+  input::-webkit-outer-spin-button,
+.modal.login
+  .cont
+  .modal-cont
+  .non-member-login
+  form
+  .login-form
+  input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+.modal.login
+  .cont
+  .modal-cont
+  .non-member-login
+  form
+  .login-form
+  input:nth-child(2),
+.modal.login
+  .cont
+  .modal-cont
+  .non-member-login
+  form
+  .login-form
+  input:nth-child(4),
+.modal.login
+  .cont
+  .modal-cont
+  .non-member-login
+  form
+  .login-form
+  input:nth-last-child(3),
+.modal.login
+  .cont
+  .modal-cont
+  .non-member-login
+  form
+  .login-form
+  input:last-child {
+  grid-column: span 2;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form .time-count {
+  position: absolute;
+  right: 115px;
+  margin-top: 48px;
+  color: red;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-form button {
+  padding: 6px 0 10px;
+  border-radius: 3px;
+  background: #e0e0e0;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement {
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  font-size: 1.05em;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement span {
+  display: block;
+  padding: 15px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement p {
+  padding: 15px;
+}
+.modal.login
+  .cont
+  .modal-cont
+  .non-member-login
+  form
+  .agreement
+  p:nth-child(2) {
+  color: #777;
+  line-height: 2;
+}
+.modal.login
+  .cont
+  .modal-cont
+  .non-member-login
+  form
+  .agreement
+  p:nth-child(2)
+  em {
+  color: black;
+  margin-right: 8px;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement p:last-child {
+  color: #037b94;
+  position: relative;
+  margin-left: 13px;
+  line-height: 1.5;
+}
+.modal.login
+  .cont
+  .modal-cont
+  .non-member-login
+  form
+  .agreement
+  p:last-child::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: #037b94;
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  top: 23px;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement div {
+  margin: 5px 15px 15px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement div input {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.modal.login .cont .modal-cont .non-member-login form .agreement div label {
+  line-height: 1.5;
+  margin-right: 20px;
+}
+.modal.login .cont .modal-cont .non-member-login form .login-btn {
+  grid-column: span 2;
+  width: 60px;
+  padding: 8px 0 12px;
+  border-radius: 5px;
+  margin: auto;
+  background: #e0e0e0;
+  color: #777;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 footer {

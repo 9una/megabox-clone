@@ -15,29 +15,30 @@ function bookScroll() {
 bookScroll();
 window.addEventListener('scroll', bookScroll);
 
+// step-1
+function movie() { 
+
+}
+
+function theather() {
+    const list = document.querySelectorAll('.theather .list > ul > li');
+    for (let i = 0; i < list.length; i++) { 
+        list[i].addEventListener('click', () => { 
+            let j = 0;
+            while (j < list.length) { 
+                list[j++].classList.remove('active');
+            }
+            list[i].classList.add('active');
+        })
+    }
+}
+theather();
+
 
 // next step
 const timeItem = document.querySelectorAll('.time .cont button');
-const modal = document.querySelector('main .modal');
 const stepOne = document.querySelector('.step-1');
 const stepTwo = document.querySelector('.step-2');
-
-function modalNext() {
-    modal.style.display = "block";
-}
-for (let i = 0; i < timeItem.length; i++) { 
-    timeItem[i].addEventListener('click', modalNext);
-}
-
-function closeModal() { 
-    modal.style.display = "none";
-}
-
-function nextStep() { 
-    modal.style.display = "none";
-    stepOne.style.display = "none";
-    stepTwo.style.display = "grid";
-}
 
 // step-2
 function count() { 
@@ -75,3 +76,9 @@ timeBtn.addEventListener('click', () => {
     timeSelect.classList.toggle('open');
     timeBtn.classList.toggle('click');
 })
+
+//prev step
+function prevStep() { 
+    stepTwo.style.display = "none";
+    stepOne.style.display = "grid";
+}
