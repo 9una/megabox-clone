@@ -36,7 +36,6 @@ theather();
 
 
 // next step
-const timeItem = document.querySelectorAll('.time .cont button');
 const stepOne = document.querySelector('.step-1');
 const stepTwo = document.querySelector('.step-2');
 
@@ -44,6 +43,7 @@ const stepTwo = document.querySelector('.step-2');
 function count() { 
     const minusBtns = stepTwo.querySelectorAll(".minus");
     const plusBtns = stepTwo.querySelectorAll(".plus");
+    const resetBtn = stepTwo.querySelector('.reset-btn');
 
     minusBtns.forEach((btnPlus) => {
         btnPlus.addEventListener("click",function(e){
@@ -66,6 +66,13 @@ function count() {
                 alert('최대 6명까지 선택 가능합니다.');
             }
         })
+    })
+
+    resetBtn.addEventListener('click', () => { 
+        const result = stepTwo.querySelectorAll('.count-cont .result');
+        for (let i = 0; i < result.length; i++) { 
+            result[i].value = 0;
+        }
     })
 }
 count();

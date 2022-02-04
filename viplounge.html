@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/reset.css" />
+    <link rel="stylesheet" href="dist/css/styles.css" />
+    <title>메가박스 멤버십</title>
+</head>
+<body>
+    <header id="header" class="white"></header>
+    <!-- header - e -->
+    <div id="container" class="booking">
+        <div class="location">
+            <div class="wrapper">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <a href="#;">혜택</a>
+                <a href="#;">메가박스 멤버십</a>
+                <a href="viplounge.html">VIP LOUNGE</a>
+            </div>
+        </div>
+        <main>
+            <div class="wrapper">
+                <div class="title">
+                    <h3>메가박스 멤버십</h3>
+                </div>
+                <div class="type-btn">
+                    <a href="membership.html" class="membership-btn">멤버십 안내</a>
+                    <a href="viplounge.html" class="vip-btn active">VIP LOUNGE</a>
+                </div>
+                <section class="title-banner">
+                    <div>
+                        <h2>MEGABOX VIP</h2>
+                        <p>메가박스의 더 많은 혜택을 누릴 수 있는 방법!</p>
+                    </div>
+                    <div>
+                        <i>?</i>
+                        <p>로그인 후 메가박스 등급을 확인하세요.</p>
+                        <button type="button" onclick="modalLogin()" class="login-btn">로그인</button>
+                    </div>
+                </section>
+                <section class="vip-event-slide">
+                    <h4>VIP 회원님을 위한 특별한 이벤트!!</h4>
+                    <div class="pagination">
+                        pagination
+                    </div>
+                    <div class="slide">
+                        <ul>
+                            <li>
+                                <a href="#;">
+                                    <div class="img">
+                                        <img src="" alt="" />
+                                    </div>
+                                    <div class="text">
+                                        <p></p>
+                                        <span></span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i></button>
+                    <button type="button" class="next-btn"><i class="fas fa-arrow-right"></i></button>
+                </section>
+                <section class="vip-selection">
+                    <h4>VIP 선정 기준</h4>
+
+                </section>
+                <section id="vip-benefit">
+                    <h4>VIP 멤버십 혜택</h4>
+
+                </section>
+            </div>
+        </main>
+    </div>
+    <!-- container - e -->
+    <footer id="footer"></footer>
+    <!-- footer - e -->
+    <div id="modalLogin" class="modal login"></div>
+    
+
+    <script src="js/booking.js"></script>
+    <script src="js/viplounge.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#header').load("header.html");
+            $('#footer').load("footer.html");
+            $('#modalLogin').load("modal-login.html");
+        });
+    </script>
+</body>
+</html>

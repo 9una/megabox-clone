@@ -92,6 +92,10 @@
       justify-content: space-between;
       & > button {
         width: 20px;
+        color: #777;
+        &:hover {
+          color: black;
+        }
       }
       .wrap {
         width: 100%;
@@ -106,6 +110,16 @@
             }
             &:nth-child(2) {
               font-size: 0.9em;
+            }
+          }
+          &.sat {
+            span {
+              color: #3b5fcb;
+            }
+          }
+          &.sun {
+            span {
+              color: #e81002;
             }
           }
           &:hover {
@@ -433,7 +447,6 @@
       & > button {
         width: 40px;
         height: 30px;
-        font-size: 1.2em;
         color: #777;
         &:hover {
           color: black;
@@ -503,6 +516,9 @@
                 width: 14px;
                 height: 14px;
                 display: inline-block;
+              }
+              &.morning::before {
+                background: url(../../img/icon-sun.png) no-repeat center;
               }
               &.brunch::before {
                 background: url(../../img/icon-brunch.png) no-repeat center;

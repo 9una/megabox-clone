@@ -325,40 +325,40 @@ header .mypage-box .wrapper .join-link {
   border-bottom: 1px solid white;
   padding-bottom: 5px;
 }
-header.booking-header {
+header.white {
   background: white;
   border-bottom: 1px solid #503396;
 }
-header.booking-header .wrapper .logo {
+header.white .wrapper .logo {
   background: url(../../img/logo-booking.png) no-repeat center;
 }
-header.booking-header .wrapper .header-top button,
-header.booking-header .wrapper .header-top a {
+header.white .wrapper .header-top button,
+header.white .wrapper .header-top a {
   color: #444;
 }
-header.booking-header .wrapper .gnb > ul > li > a {
+header.white .wrapper .gnb > ul > li > a {
   color: black;
   font-weight: bold;
 }
-header.booking-header .wrapper .gnb > ul > li:hover > a::after {
+header.white .wrapper .gnb > ul > li:hover > a::after {
   background: #339eb2;
 }
-header.booking-header .wrapper .gnb > ul:hover .bg {
+header.white .wrapper .gnb > ul:hover .bg {
   background: #339eb2;
 }
-header.booking-header .wrapper .gnb .all-menu-btn {
+header.white .wrapper .gnb .all-menu-btn {
   background: url(../../img/header-icon-hamburger-grey.png) no-repeat center left;
   background-size: contain;
 }
-header.booking-header .wrapper .gnb .search-btn {
+header.white .wrapper .gnb .search-btn {
   background: url(../../img/header-icon-search-grey.png) no-repeat center left;
   background-size: contain;
 }
-header.booking-header .wrapper .gnb .go-booking {
+header.white .wrapper .gnb .go-booking {
   background: url(../../img/header-icon-calendar-grey.png) no-repeat center right;
   background-size: contain;
 }
-header.booking-header .wrapper .gnb .mypage-btn {
+header.white .wrapper .gnb .mypage-btn {
   background: url(../../img/header-icon-user-grey.png) no-repeat center right;
   background-size: contain;
 }
@@ -1015,6 +1015,10 @@ header.booking-header .wrapper .gnb .mypage-btn {
 }
 .step-1 .date .date-pick > button {
   width: 20px;
+  color: #777;
+}
+.step-1 .date .date-pick > button:hover {
+  color: black;
 }
 .step-1 .date .date-pick .wrap {
   width: 100%;
@@ -1030,6 +1034,12 @@ header.booking-header .wrapper .gnb .mypage-btn {
 }
 .step-1 .date .date-pick .wrap button span:nth-child(2) {
   font-size: 0.9em;
+}
+.step-1 .date .date-pick .wrap button.sat span {
+  color: #3b5fcb;
+}
+.step-1 .date .date-pick .wrap button.sun span {
+  color: #e81002;
 }
 .step-1 .date .date-pick .wrap button:hover {
   position: relative;
@@ -1337,7 +1347,6 @@ header.booking-header .wrapper .gnb .mypage-btn {
 .step-1 .time .time-btn > button {
   width: 40px;
   height: 30px;
-  font-size: 1.2em;
   color: #777;
 }
 .step-1 .time .time-btn > button:hover {
@@ -1410,6 +1419,9 @@ header.booking-header .wrapper .gnb .mypage-btn {
   width: 14px;
   height: 14px;
   display: inline-block;
+}
+.step-1 .time .cont ul li button div.morning::before {
+  background: url(../../img/icon-sun.png) no-repeat center;
 }
 .step-1 .time .cont ul li button div.brunch::before {
   background: url(../../img/icon-brunch.png) no-repeat center;
@@ -1813,7 +1825,7 @@ header.booking-header .wrapper .gnb .mypage-btn {
   height: 400px;
 }
 .modal.notice .cont .modal-cont p {
-  font-size: 1.1em;
+  font-size: 1.15em;
   line-height: 1.5;
 }
 .modal.notice .cont .modal-cont p em {
