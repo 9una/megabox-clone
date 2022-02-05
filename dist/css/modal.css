@@ -21,11 +21,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
 }
 .modal .cont .modal-head h4 {
   font-size: 1.3em;
   font-weight: normal;
+  padding: 0 15px;
+}
+.modal .cont .modal-head button {
+  padding: 15px;
 }
 .modal .cont .modal-cont {
   padding: 20px;

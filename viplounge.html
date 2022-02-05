@@ -45,7 +45,12 @@
                 <div class="wrapper">
                     <h4>VIP 회원님을 위한 특별한 이벤트!!</h4>
                     <div class="pagination">
-                        pagination
+                        <div class="bar">
+                            <span class="dot"></span>
+                        </div>
+                        <button type="button" class="prev-btn" onclick="prev()"><i class="fas fa-chevron-left"></i></button>
+                        <button type="button" class="next-btn" onclick="next()"><i class="fas fa-chevron-right"></i></button>
+                        <p><span class="num">1</span> / <span class="all">0</span></p>
                     </div>
                     <div class="slide">
                         <ul>
@@ -139,8 +144,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i></button>
-                    <button type="button" class="next-btn"><i class="fas fa-arrow-right"></i></button>
+                    <button type="button" class="prev-btn" onclick="prev()"><i class="fas fa-arrow-left"></i></button>
+                    <button type="button" class="next-btn" onclick="next()"><i class="fas fa-arrow-right"></i></button>
                 </div>
             </section>
             <div class="wrapper">
@@ -369,6 +374,7 @@
             </div>
         </main>
     </div>
+    <a href="#header" id="go-top"><i class="fas fa-sort-up"></i>TOP</a>
     <!-- container - e -->
     <footer id="footer"></footer>
     <!-- footer - e -->

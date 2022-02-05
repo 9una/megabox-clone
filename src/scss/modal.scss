@@ -21,10 +21,13 @@
       color: white;
       @include flex-align-center;
       justify-content: space-between;
-      padding: 15px 20px;
       h4 {
         font-size: 1.3em;
         font-weight: normal;
+        padding: 0 15px;
+      }
+      button {
+        padding: 15px;
       }
     }
     .modal-cont {

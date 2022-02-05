@@ -2300,6 +2300,7 @@ header.white .wrapper .gnb .mypage-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 .lounge main .wrapper section.vip-benefit article .vip-day-point div {
   display: flex;
@@ -2399,6 +2400,41 @@ header.white .wrapper .gnb .mypage-btn {
 }
 .lounge main .vip-event .wrapper {
   position: relative;
+  padding-bottom: 70px !important;
+}
+.lounge main .vip-event .wrapper h4 {
+  font-size: 1.7em;
+  font-weight: normal;
+  color: #503396;
+  margin: 20px 0 20px;
+  display: inline-block;
+}
+.lounge main .vip-event .wrapper .pagination {
+  display: flex;
+  align-items: center;
+  position: relative;
+  float: right;
+  margin-top: 30px;
+  margin-right: 15px;
+  gap: 15px;
+  z-index: 3;
+}
+.lounge main .vip-event .wrapper .pagination .bar {
+  width: 160px;
+  height: 2px;
+  background: #dbdbdb;
+  position: relative;
+}
+.lounge main .vip-event .wrapper .pagination .bar .dot {
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 12.5%;
+  background: #503396;
+  transition: transform 0.3s;
+}
+.lounge main .vip-event .wrapper .pagination button {
+  color: #503396;
 }
 .lounge main .vip-event .wrapper .slide {
   width: 100%;
@@ -2406,6 +2442,7 @@ header.white .wrapper .gnb .mypage-btn {
 }
 .lounge main .vip-event .wrapper .slide ul {
   display: flex;
+  transition: transform 0.3s;
 }
 .lounge main .vip-event .wrapper .slide ul li {
   width: 530px;
@@ -2415,6 +2452,10 @@ header.white .wrapper .gnb .mypage-btn {
   width: 100%;
 }
 .lounge main .vip-event .wrapper .slide ul li a .img {
+  width: 530px;
+  height: 245px;
+  border-radius: 5px;
+  overflow: hidden;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
 }
 .lounge main .vip-event .wrapper .slide ul li a .text {
@@ -2423,9 +2464,9 @@ header.white .wrapper .gnb .mypage-btn {
   align-items: center;
   justify-content: space-between;
 }
-.lounge main .vip-event .wrapper button {
+.lounge main .vip-event .wrapper > button {
   position: absolute;
-  bottom: 50%;
+  bottom: 43%;
   width: 50px;
   height: 50px;
   background: white;
@@ -2434,11 +2475,11 @@ header.white .wrapper .gnb .mypage-btn {
   font-size: 1.5em;
   color: #666;
 }
-.lounge main .vip-event .wrapper button.prev-btn {
+.lounge main .vip-event .wrapper > button.prev-btn {
   left: -25px;
 }
-.lounge main .vip-event .wrapper button.next-btn {
-  right: -25px;
+.lounge main .vip-event .wrapper > button.next-btn {
+  right: -15px;
 }
 
 /*modal*/
@@ -2464,11 +2505,14 @@ header.white .wrapper .gnb .mypage-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
 }
 .modal .cont .modal-head h4 {
   font-size: 1.3em;
   font-weight: normal;
+  padding: 0 15px;
+}
+.modal .cont .modal-head button {
+  padding: 15px;
 }
 .modal .cont .modal-cont {
   padding: 20px;
@@ -2866,6 +2910,28 @@ img {
 .wrapper {
   width: 1100px;
   margin: auto;
+}
+
+#go-top {
+  background: #444;
+  color: #f3f3f3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  position: fixed;
+  bottom: 50px;
+  right: calc(50% - 550px - 100px);
+  transition: opacity 0.3s;
+  font-weight: bold;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+#go-top.visible {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
