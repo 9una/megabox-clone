@@ -1,3 +1,4 @@
+//슬라이드 배너
 function slideBanner() {
     let curPos = 0;
     const slide = document.querySelector('#slide-bn .slide'),

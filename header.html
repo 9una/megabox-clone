@@ -58,11 +58,11 @@
                     <li><a href="#;">제휴/할인</a></li>
                 </ul>
             </li>
-            <div class="bg"></div>
         </ul>
         <a href="booking.html" class="go-booking"></a>
         <button type="button" class="mypage-btn"></button>
     </nav>
+    <div class="bg"></div>
 </div>
 <!-- button's box -->
 <div class="call-box all-menu-box">
@@ -198,6 +198,17 @@
 </div>
 
 <script type="text/javascript">
+    // 헤더 gnb li 마우스오버시 lnb bg block
+    const LNB_BG = document.querySelector('header .bg');
+    const lnb = document.querySelectorAll('header .gnb > ul > li');
+    lnb.forEach(function(item){
+        item.addEventListener('mouseover', ()=>{
+            LNB_BG.style.display = "block";
+        })
+        item.addEventListener('mouseout', ()=>{
+            LNB_BG.style.display = "none";
+        })
+    })
     
     function gnbCallMenu(){
         const callMenuBtn = document.querySelectorAll('.gnb > button');

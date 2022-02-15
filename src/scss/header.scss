@@ -1,3 +1,6 @@
+@import "_variables";
+@import "_mixins";
+
 header {
   width: 100%;
   height: 90px;
@@ -30,8 +33,6 @@ header {
         button {
           color: #999;
         }
-      }
-      .top-left {
       }
       .top-right {
         .login-btn {
@@ -111,19 +112,6 @@ header {
             }
           }
         }
-        &:hover {
-          .bg {
-            position: relative;
-            top: 90px;
-            display: block;
-            width: 100%;
-            height: 45px;
-            position: absolute;
-            left: 0;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1;
-          }
-        }
       }
       .all-menu-btn {
         background: url(../../img/header-icon-hamburger.png) no-repeat center
@@ -143,6 +131,16 @@ header {
         background: url(../../img/header-icon-user.png) no-repeat center right;
         background-size: contain;
       }
+    }
+    .bg {
+      display: none;
+      top: 90px;
+      width: 100%;
+      height: 45px;
+      position: absolute;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
     }
   }
   .call-box {
@@ -364,11 +362,6 @@ header {
               }
             }
           }
-          &:hover {
-            .bg {
-              background: $lightgreen;
-            }
-          }
         }
         .all-menu-btn {
           background: url(../../img/header-icon-hamburger-grey.png) no-repeat
@@ -390,6 +383,9 @@ header {
             right;
           background-size: contain;
         }
+      }
+      .bg {
+        background: $lightgreen;
       }
     }
   }

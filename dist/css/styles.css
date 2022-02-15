@@ -107,17 +107,6 @@ header .wrapper .gnb > ul > li:hover .lnb li a {
   color: white;
   font-size: 1.15em;
 }
-header .wrapper .gnb > ul:hover .bg {
-  position: relative;
-  top: 90px;
-  display: block;
-  width: 100%;
-  height: 45px;
-  position: absolute;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
 header .wrapper .gnb .all-menu-btn {
   background: url(../../img/header-icon-hamburger.png) no-repeat center left;
   background-size: contain;
@@ -133,6 +122,16 @@ header .wrapper .gnb .go-booking {
 header .wrapper .gnb .mypage-btn {
   background: url(../../img/header-icon-user.png) no-repeat center right;
   background-size: contain;
+}
+header .wrapper .bg {
+  display: none;
+  top: 90px;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 header .call-box {
   display: none;
@@ -343,9 +342,6 @@ header.white .wrapper .gnb > ul > li > a {
 header.white .wrapper .gnb > ul > li:hover > a::after {
   background: #339eb2;
 }
-header.white .wrapper .gnb > ul:hover .bg {
-  background: #339eb2;
-}
 header.white .wrapper .gnb .all-menu-btn {
   background: url(../../img/header-icon-hamburger-grey.png) no-repeat center left;
   background-size: contain;
@@ -361,6 +357,9 @@ header.white .wrapper .gnb .go-booking {
 header.white .wrapper .gnb .mypage-btn {
   background: url(../../img/header-icon-user-grey.png) no-repeat center right;
   background-size: contain;
+}
+header.white .wrapper .bg {
+  background: #339eb2;
 }
 
 #container .location {
@@ -1176,7 +1175,7 @@ header.white .wrapper .gnb .mypage-btn {
   gap: 5px;
   padding: 4px 5px;
 }
-.step-1 .movie .cont .list ul li button p {
+.step-1 .movie .cont .list ul li button span:nth-child(2) {
   margin-right: auto;
   text-align: left;
   width: 75%;
@@ -1188,7 +1187,7 @@ header.white .wrapper .gnb .mypage-btn {
 .step-1 .movie .cont .list ul li.active {
   background: #666666;
 }
-.step-1 .movie .cont .list ul li.active button p {
+.step-1 .movie .cont .list ul li.active button span:nth-child(2) {
   color: white;
 }
 .step-1 .movie .cont .list ul li:not(.active):hover {
@@ -1394,24 +1393,24 @@ header.white .wrapper .gnb .mypage-btn {
   border-bottom: 1px solid #dbdbdb;
   background: white;
 }
-.step-1 .time .cont ul li button {
+.step-1 .time .cont ul li a {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
 }
-.step-1 .time .cont ul li button div {
+.step-1 .time .cont ul li a div {
   color: #777;
   font-size: 0.95em;
   text-align: left;
   position: relative;
 }
-.step-1 .time .cont ul li button div strong {
+.step-1 .time .cont ul li a div strong {
   font-size: 1.5em;
   color: black;
 }
-.step-1 .time .cont ul li button div::before {
+.step-1 .time .cont ul li a div::before {
   content: "";
   position: absolute;
   left: -22px;
@@ -1420,33 +1419,33 @@ header.white .wrapper .gnb .mypage-btn {
   height: 14px;
   display: inline-block;
 }
-.step-1 .time .cont ul li button div.morning::before {
+.step-1 .time .cont ul li a div.morning::before {
   background: url(../../img/icon-sun.png) no-repeat center;
 }
-.step-1 .time .cont ul li button div.brunch::before {
+.step-1 .time .cont ul li a div.brunch::before {
   background: url(../../img/icon-brunch.png) no-repeat center;
 }
-.step-1 .time .cont ul li button .movie-title {
+.step-1 .time .cont ul li a .movie-title {
   margin-right: auto;
   text-align: left;
   font-size: 0.9em;
   line-height: 1.4;
 }
-.step-1 .time .cont ul li button .movie-title em {
+.step-1 .time .cont ul li a .movie-title em {
   font-size: 1.2em;
 }
-.step-1 .time .cont ul li button .movie-theather {
+.step-1 .time .cont ul li a .movie-theather {
   text-align: right;
   font-size: 0.85em;
   line-height: 1.3;
 }
-.step-1 .time .cont ul li button .movie-theather span {
+.step-1 .time .cont ul li a .movie-theather span {
   display: inline-block;
   margin-top: 3px;
   padding: 3px 5px;
   border: 1px solid #e9e9e9;
 }
-.step-1 .time .cont ul li button .movie-theather span b {
+.step-1 .time .cont ul li a .movie-theather span b {
   color: #037b94;
 }
 .step-1 .time .cont ul li:hover {

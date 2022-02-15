@@ -20,9 +20,6 @@ scrollFixed();
 window.addEventListener('scroll', scrollFixed);
 
 // step-1
-function movie() { 
-
-}
 
 function theather() {
     const list = document.querySelectorAll('.theather .list > ul > li');

@@ -1,5 +1,5 @@
 // next step
-const timeItem = document.querySelectorAll('.time .cont button');
+const timeItem = document.querySelectorAll('.step-1 .time .cont a');
 const modal = document.querySelectorAll('main .modal');
 
 function modalNext() {

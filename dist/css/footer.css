@@ -1,17 +1,61 @@
-/* Error: Undefined mixin.
- *   ,
- * 6 |       @include flex-align-center;
- *   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   src\scss\footer.scss 6:7  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 6 \2502        @include flex-align-center;\d\a   \2502        ^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\scss\\footer.scss 6:7  root stylesheet";
+footer {
+  background: #f8f8fa;
 }
+footer .wrapper {
+  padding: 40px 0 60px;
+}
+footer .wrapper .fnb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+footer .wrapper .fnb ul {
+  display: flex;
+}
+footer .wrapper .fnb ul li {
+  margin-right: 15px;
+}
+footer .wrapper .fnb ul li a {
+  color: #444;
+}
+footer .wrapper .fnb .find-theather {
+  border: 1px solid #888;
+  padding: 6px 15px;
+  border-radius: 30px;
+  color: #666;
+}
+footer .wrapper .fnb .find-theather i {
+  margin-right: 3px;
+}
+footer .wrapper .footer-bottom {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+footer .wrapper .footer-bottom img {
+  object-fit: contain;
+}
+footer .wrapper .footer-bottom p {
+  margin-right: auto;
+  line-height: 1.4;
+}
+footer .wrapper .footer-bottom .sns {
+  display: flex;
+  gap: 10px;
+}
+footer .wrapper .footer-bottom .sns a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #999;
+}
+footer .wrapper .footer-bottom .sns a i {
+  color: white;
+  font-size: 1.4em;
+}
+
+/*# sourceMappingURL=footer.css.map */

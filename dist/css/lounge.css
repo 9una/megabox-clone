@@ -1,17 +1,698 @@
-/* Error: Undefined mixin.
- *    ,
- * 16 |         @include flex-align-center;
- *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   src\scss\lounge.scss 16:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 16 \2502          @include flex-align-center;\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   src\\scss\\lounge.scss 16:9  root stylesheet";
+.lounge {
+  padding-top: 90px;
 }
+.lounge main {
+  padding: 40px 0 80px;
+}
+.lounge main .wrapper .title {
+  margin-bottom: 30px;
+}
+.lounge main .wrapper .title h3 {
+  font-size: 2.1em;
+  font-weight: normal;
+}
+.lounge main .wrapper .type-btn {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+.lounge main .wrapper .type-btn a {
+  padding: 13px;
+  text-align: center;
+  font-size: 1.2em;
+  width: 50%;
+  border: 1px solid #dbdbdb;
+  border-bottom-color: #503396;
+}
+.lounge main .wrapper .type-btn a.active {
+  border-color: #503396;
+  border-bottom-color: white;
+  color: #503396;
+}
+.lounge main .wrapper section {
+  padding-top: 50px;
+}
+.lounge main .wrapper section h4 {
+  font-size: 1.7em;
+  font-weight: normal;
+  color: #503396;
+  margin: 20px 0 20px;
+}
+.lounge main .wrapper section.title-banner {
+  border: 1px solid #dbdbdb;
+  width: 100%;
+  padding: 35px;
+  text-align: center;
+  background: url(../../img/bg-slash.png) repeat center;
+  border-radius: 10px;
+}
+.lounge main .wrapper section.title-banner h3 {
+  font-size: 2.5em;
+  color: #503396;
+  margin-bottom: 15px;
+}
+.lounge main .wrapper section.title-banner p {
+  font-size: 1.15em;
+}
+.lounge main .wrapper section.membership-benefit .box-cont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.lounge main .wrapper section.membership-benefit .box-cont article {
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  padding: 35px 40px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-column-gap: 40px;
+  font-size: 1.15em;
+}
+.lounge main .wrapper section.membership-benefit .box-cont article .img {
+  grid-row: span 3;
+  text-align: center;
+}
+.lounge main .wrapper section.membership-benefit .box-cont article .img img {
+  margin-top: 10px;
+}
+.lounge main .wrapper section.membership-benefit .box-cont article h5 {
+  font-size: 1.4em;
+  font-weight: normal;
+  color: #503396;
+  margin-bottom: 10px;
+}
+.lounge main .wrapper section.membership-benefit .box-cont article p {
+  line-height: 1.5;
+}
+.lounge main .wrapper section.membership-benefit .box-cont article a {
+  width: fit-content;
+  height: fit-content;
+  background: #503396;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.lounge main .wrapper section.membership-benefit .box-cont article span {
+  margin: 0;
+}
+.lounge main .wrapper section.membership-benefit .box-cont article span::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #503396;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 4px;
+}
+.lounge main .wrapper section.membership-benefit ul li {
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.lounge main .wrapper section.membership-benefit ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #503396;
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+.lounge main .wrapper section.membership-benefit ul li b {
+  color: #037b94;
+}
+.lounge main .wrapper section.membership-benefit ul li span {
+  font-size: 0.9em;
+  margin: 3px 0 0 10px;
+  color: #555;
+  display: block;
+}
+.lounge main .wrapper section.membership-benefit ul li span:last-child {
+  margin-bottom: 10px;
+}
+.lounge main .wrapper section.membership-benefit ul li > div {
+  margin: 15px 0 30px;
+}
+.lounge main .wrapper section.membership-benefit ul .text-cont {
+  padding: 30px;
+  background: #f2f4f5;
+  color: #037b94;
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+.lounge main .wrapper section#accumulate article h6, .lounge main .wrapper section.expiration article h6, .lounge main .wrapper section#birthday article h6 {
+  font-size: 1.4em;
+  margin: 30px 0 15px;
+  font-weight: normal;
+}
+.lounge main .wrapper section#accumulate article ul li, .lounge main .wrapper section.expiration article ul li, .lounge main .wrapper section#birthday article ul li {
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.lounge main .wrapper section#accumulate article ul li::before, .lounge main .wrapper section.expiration article ul li::before, .lounge main .wrapper section#birthday article ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #503396;
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+.lounge main .wrapper section#accumulate article ul li b, .lounge main .wrapper section.expiration article ul li b, .lounge main .wrapper section#birthday article ul li b {
+  color: #037b94;
+}
+.lounge main .wrapper section#accumulate article ul li span, .lounge main .wrapper section.expiration article ul li span, .lounge main .wrapper section#birthday article ul li span {
+  font-size: 0.9em;
+  margin: 3px 0 0 10px;
+  color: #555;
+  display: block;
+}
+.lounge main .wrapper section#accumulate article ul li span:last-child, .lounge main .wrapper section.expiration article ul li span:last-child, .lounge main .wrapper section#birthday article ul li span:last-child {
+  margin-bottom: 10px;
+}
+.lounge main .wrapper section#accumulate article ul li > div, .lounge main .wrapper section.expiration article ul li > div, .lounge main .wrapper section#birthday article ul li > div {
+  margin: 15px 0 30px;
+}
+.lounge main .wrapper section#use article h6 {
+  font-size: 1.4em;
+  margin: 30px 0 15px;
+  font-weight: normal;
+}
+.lounge main .wrapper section#use article ul li {
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.lounge main .wrapper section#use article ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #503396;
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+.lounge main .wrapper section#use article ul li b {
+  color: #037b94;
+}
+.lounge main .wrapper section#use article ul li span {
+  font-size: 0.9em;
+  margin: 3px 0 0 10px;
+  color: #555;
+  display: block;
+}
+.lounge main .wrapper section#use article ul li span:last-child {
+  margin-bottom: 10px;
+}
+.lounge main .wrapper section#use article ul li > div {
+  margin: 15px 0 30px;
+}
+.lounge main .wrapper section#use article ul table {
+  margin: 20px 0 30px;
+  width: 100%;
+  border-top: 2px solid black;
+  text-align: center;
+}
+.lounge main .wrapper section#use article ul table tr {
+  border-bottom: 1px solid #e9e9e9;
+}
+.lounge main .wrapper section#use article ul table tr th {
+  background: #f9f9f9;
+  font-weight: bold;
+}
+.lounge main .wrapper section#use article ul table tr th:not(:first-child) {
+  width: 29%;
+}
+.lounge main .wrapper section#use article ul table tr th:last-child {
+  width: 30%;
+}
+.lounge main .wrapper section#use article ul table tr th,
+.lounge main .wrapper section#use article ul table tr td {
+  padding: 12px 0;
+  vertical-align: middle;
+}
+.lounge main .wrapper section#use article ul table tr th:not(:last-child),
+.lounge main .wrapper section#use article ul table tr td:not(:last-child) {
+  border-right: 1px solid #e9e9e9;
+}
+.lounge main .wrapper section.card article h6 {
+  font-size: 1.4em;
+  margin: 30px 0 15px;
+  font-weight: normal;
+}
+.lounge main .wrapper section.card article ul li {
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.lounge main .wrapper section.card article ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #503396;
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+.lounge main .wrapper section.card article ul li b {
+  color: #037b94;
+}
+.lounge main .wrapper section.card article ul li span {
+  font-size: 0.9em;
+  margin: 3px 0 0 10px;
+  color: #555;
+  display: block;
+}
+.lounge main .wrapper section.card article ul li span:last-child {
+  margin-bottom: 10px;
+}
+.lounge main .wrapper section.card article ul li > div {
+  margin: 15px 0 30px;
+}
+.lounge main .wrapper section.card article ul .card-cont {
+  width: 100%;
+  padding: 30px;
+  background: #f2f4f5;
+  text-align: center;
+}
+.lounge main .wrapper section.vip-level {
+  height: 344px;
+  background: url(../../img/vip-bg.png) no-repeat center;
+  background-size: contain;
+  display: grid;
+  grid-template-columns: 340px auto;
+  padding: 0;
+  margin-bottom: 80px;
+}
+.lounge main .wrapper section.vip-level > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.lounge main .wrapper section.vip-level > div h2 {
+  font-size: 2.5em;
+  font-weight: normal;
+}
+.lounge main .wrapper section.vip-level > div p {
+  font-size: 1.15em;
+}
+.lounge main .wrapper section.vip-level > div i {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  border: 1px solid #bbb;
+  font-size: 5em;
+}
+.lounge main .wrapper section.vip-level > div button {
+  padding: 10px 30px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+.lounge main .wrapper section.vip-selection article h6 {
+  font-size: 1.4em;
+  margin: 30px 0 15px;
+  font-weight: normal;
+}
+.lounge main .wrapper section.vip-selection article .box-cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div {
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div:not(.period) {
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  padding: 35px 40px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-column-gap: 40px;
+  font-size: 1.15em;
+  padding: 25px 20px;
+  gap: 10px 20px;
+  grid-template-rows: 25px auto;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div:not(.period) .img {
+  grid-row: span 3;
+  text-align: center;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div:not(.period) .img img {
+  margin-top: 10px;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div:not(.period) h5 {
+  font-size: 1.4em;
+  font-weight: normal;
+  color: #503396;
+  margin-bottom: 10px;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div:not(.period) p {
+  line-height: 1.5;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div:not(.period) a {
+  width: fit-content;
+  height: fit-content;
+  background: #503396;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div:not(.period) .img {
+  grid-row: span 2;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div:not(.period) .img img {
+  margin-top: 20px;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div.period {
+  font-size: 1.15em;
+  padding: 20px;
+  grid-column: span 3;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+.lounge main .wrapper section.vip-selection article .box-cont > div.period span::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  margin: 0 4px 4px 0;
+  border-radius: 50%;
+  display: inline-block;
+  background: #444;
+}
+.lounge main .wrapper section.vip-selection article ul li {
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.lounge main .wrapper section.vip-selection article ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #503396;
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+.lounge main .wrapper section.vip-selection article ul li b {
+  color: #037b94;
+}
+.lounge main .wrapper section.vip-selection article ul li span {
+  font-size: 0.9em;
+  margin: 3px 0 0 10px;
+  color: #555;
+  display: block;
+}
+.lounge main .wrapper section.vip-selection article ul li span:last-child {
+  margin-bottom: 10px;
+}
+.lounge main .wrapper section.vip-selection article ul li > div {
+  margin: 15px 0 30px;
+}
+.lounge main .wrapper section.vip-benefit article h6 {
+  font-size: 1.4em;
+  margin: 30px 0 15px;
+  font-weight: normal;
+  margin-top: 0;
+  display: inline-block;
+}
+.lounge main .wrapper section.vip-benefit article h6::after {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background: #bbb;
+  margin: 0 10px 0 13px;
+  display: inline-block;
+}
+.lounge main .wrapper section.vip-benefit article > span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+.lounge main .wrapper section.vip-benefit article > span b {
+  color: #037b94;
+}
+.lounge main .wrapper section.vip-benefit article .box-cont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 15px;
+}
+.lounge main .wrapper section.vip-benefit article .box-cont > div {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-left: 50px;
+  height: 171px;
+  background: url(../../img/vip-cont-bg.png) no-repeat center;
+  background-size: contain;
+}
+.lounge main .wrapper section.vip-benefit article .box-cont > div p {
+  font-size: 1.15em;
+}
+.lounge main .wrapper section.vip-benefit article .box-cont > div p strong {
+  display: block;
+  font-size: 1.3em;
+  font-weight: normal;
+  color: #503396;
+  margin-bottom: 10px;
+}
+.lounge main .wrapper section.vip-benefit article .mission-bn {
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  padding: 40px 180px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: auto 200px 200px auto 200px;
+  margin-bottom: 15px;
+}
+.lounge main .wrapper section.vip-benefit article .mission-bn img,
+.lounge main .wrapper section.vip-benefit article .mission-bn i,
+.lounge main .wrapper section.vip-benefit article .mission-bn span:nth-last-child(3) {
+  grid-row: span 2;
+}
+.lounge main .wrapper section.vip-benefit article .mission-bn span {
+  font-size: 1.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lounge main .wrapper section.vip-benefit article .mission-bn span.grey {
+  border-radius: 30px;
+  background: #f2f4f4;
+}
+.lounge main .wrapper section.vip-benefit article .mission-bn i {
+  background: url(../../img/vip-plus-circle.png) no-repeat center;
+}
+.lounge main .wrapper section.vip-benefit article .vip-day-point {
+  background: #f9f9f9;
+  padding: 40px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.lounge main .wrapper section.vip-benefit article .vip-day-point div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.lounge main .wrapper section.vip-benefit article .vip-day-point i {
+  width: 50px;
+  height: 50px;
+  background: url(../../img/vip-plus.png) no-repeat center;
+}
+.lounge main .wrapper section.vip-benefit article ul {
+  margin-bottom: 40px;
+}
+.lounge main .wrapper section.vip-benefit article ul li {
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.lounge main .wrapper section.vip-benefit article ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #503396;
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+.lounge main .wrapper section.vip-benefit article ul li b {
+  color: #037b94;
+}
+.lounge main .wrapper section.vip-benefit article ul li span {
+  font-size: 0.9em;
+  margin: 3px 0 0 10px;
+  color: #555;
+  display: block;
+}
+.lounge main .wrapper section.vip-benefit article ul li span:last-child {
+  margin-bottom: 10px;
+}
+.lounge main .wrapper section.vip-benefit article ul li > div {
+  margin: 15px 0 30px;
+}
+.lounge main .wrapper section.vip-benefit article a {
+  background: #503396;
+  color: white;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.15em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: -30px 0 50px;
+}
+.lounge main .wrapper section.vip-benefit article.jmembership .jmembership-benefit {
+  background: #f9f9f9;
+  padding: 40px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+}
+.lounge main .wrapper section.vip-benefit article.jmembership .jmembership-benefit div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.lounge main .wrapper section.vip-benefit article.jmembership .jmembership-benefit i {
+  width: 50px;
+  height: 50px;
+  background: url(../../img/vip-plus.png) no-repeat center;
+}
+.lounge main .wrapper section.vip-benefit article.jmembership .link-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  margin: -20px 0 50px;
+}
+.lounge main .wrapper section.vip-benefit article.jmembership .link-btn a {
+  left: initial;
+  margin: 0;
+  transform: initial;
+}
+.lounge main .wrapper section.vip-benefit article.jmembership .link-btn a.white {
+  background: white;
+  border: 1px solid #503396;
+  color: #503396;
+}
+.lounge main .vip-event {
+  width: 100%;
+  background: #f2f4f5;
+}
+.lounge main .vip-event .wrapper {
+  position: relative;
+  padding-bottom: 70px !important;
+}
+.lounge main .vip-event .wrapper h4 {
+  font-size: 1.7em;
+  font-weight: normal;
+  color: #503396;
+  margin: 20px 0 20px;
+  display: inline-block;
+}
+.lounge main .vip-event .wrapper .pagination {
+  display: flex;
+  align-items: center;
+  position: relative;
+  float: right;
+  margin-top: 30px;
+  margin-right: 15px;
+  gap: 15px;
+  z-index: 3;
+}
+.lounge main .vip-event .wrapper .pagination .bar {
+  width: 160px;
+  height: 2px;
+  background: #dbdbdb;
+  position: relative;
+}
+.lounge main .vip-event .wrapper .pagination .bar .dot {
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 12.5%;
+  background: #503396;
+  transition: transform 0.3s;
+}
+.lounge main .vip-event .wrapper .pagination button {
+  color: #503396;
+}
+.lounge main .vip-event .wrapper .slide {
+  width: 100%;
+  overflow: hidden;
+}
+.lounge main .vip-event .wrapper .slide ul {
+  display: flex;
+  transition: transform 0.3s;
+}
+.lounge main .vip-event .wrapper .slide ul li {
+  width: 530px;
+  margin-right: 30px;
+}
+.lounge main .vip-event .wrapper .slide ul li a {
+  width: 100%;
+}
+.lounge main .vip-event .wrapper .slide ul li a .img {
+  width: 530px;
+  height: 245px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+.lounge main .vip-event .wrapper .slide ul li a .text {
+  padding: 15px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lounge main .vip-event .wrapper > button {
+  position: absolute;
+  bottom: 43%;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.5em;
+  color: #666;
+}
+.lounge main .vip-event .wrapper > button.prev-btn {
+  left: -25px;
+}
+.lounge main .vip-event .wrapper > button.next-btn {
+  right: -15px;
+}
+
+/*# sourceMappingURL=lounge.css.map */
